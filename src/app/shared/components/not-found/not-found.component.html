@@ -1,0 +1,23 @@
+<div ngClass="nf__container">
+    <div ngClass="nf__item">
+        <div ngClass="nf__item__message">
+            <p>Il n'y a pas <span>grand chose</span> à voir ici <br>
+                sauf peut-être <span>le vide</span> et une <span>erreur 404</span></p>
+        </div>
+        <div ngClass="nf__item__redirection">
+            <p>Vous pouvez continuer votre navigation simplement :</p>
+            <div ngClass="nf__item__buttons">
+                <div ngClass="nf__item__card" (click)="returnHome()">
+                    <img src="../../../../assets/icons/home.png" alt="icône de maison"><p>Retourner à l'accueil</p>
+                </div>
+                <div ngClass="nf__item__card" (click)="goAbout()">
+                    <img src="../../../../assets/icons/about.png" alt="icône d'information"><p>Envie d'en savoir un peu plus ?</p>
+                </div>
+                <div ngClass="nf__item__card" (click)="goContact()">
+                    <img src="../../../../assets/icons/contact.png" alt="icône de contact"><p>Me contacter</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="https://www.pexels.com/fr-fr/@xi-xi-918184/">photo par Xi Xi</a>
+</div>

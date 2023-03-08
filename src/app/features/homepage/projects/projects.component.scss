@@ -1,0 +1,116 @@
+@use '../../../../styles.scss' as *;
+
+
+.projects{
+    &__component{
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        margin: auto;
+        gap: 50px;
+        padding-bottom: 50px;
+    }
+    &__title{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        font-family: Yellowtail;
+        animation: $heroe-appearence ease-in-out 2.5s 1 projectsAppear;
+        animation-fill-mode: backwards;
+        &>h2{
+            &>span{
+                color: $hover-color;
+            }
+        }
+    }
+    &__container{
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+    }
+    &__item{
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        max-width: 900px;
+        height: 330px;
+        border-radius: 20px;
+        padding: 40px 80px;
+        background-color: rgb(2, 2, 2);
+        animation: $heroe-appearence ease-in-out 3s 1 projectsAppear;
+        animation-fill-mode: backwards;
+        transition: .5s linear all;
+        &:hover{
+            transform: scale(1.05);
+        }
+        &:nth-child(even){
+            & .projects__picture{
+                animation: 20s linear infinite movingBackground;
+            }
+        }
+        &:nth-child(odd){
+            & .projects__picture{
+                animation: 20s linear infinite movingBackgroundReverse;
+            }
+        }
+    }
+    &__description{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+        animation: $heroe-appearence ease-in-out 4s 1 projectsAppear;
+        animation-fill-mode: backwards;
+        &>p{
+            &>span{
+                color: $hover-color;
+            }
+        }
+    }
+    &__picture{
+        flex: 1;
+        background-size: 300%;
+    }
+
+    &__links{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        animation: $heroe-appearence ease-in-out 4.5s 1 projectsAppear;
+        animation-fill-mode: backwards;
+        &__directTo{
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+            border: 1px solid $hover-color;
+            padding: 10px 20px;
+            border-radius: 20px;
+            color: $hover-color;
+            transition: all .2s ease-in-out;
+            &:hover{
+                color: white;
+                background-color: $hover-color;
+            }
+        }
+        &>a{
+            &>img{
+                width: 32px;
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .projects{
+        &__description{
+            grid-auto-flow: 20px;
+        }
+        &__item{
+            flex-direction: column;
+            padding: 10px 20px;
+        }
+    }    
+}

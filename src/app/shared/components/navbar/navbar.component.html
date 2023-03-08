@@ -1,0 +1,23 @@
+<header>
+    <div>
+        <span ngClass="logo">YR</span>
+    </div>
+    <button id="toggleButton" (click)="toggleNav()" ngClass="mobileNavToggle" aria-controls="primary-navigation" aria-expanded="false" data-visible="false">
+        <span class="toggle__line"></span>
+        <span class="toggle__line"></span>
+        <span class="toggle__line"></span>
+    </button>
+    <nav ngClass="navBar">
+        <ul id="primary-navigation" data-visible="false" ngClass="nav__list">
+            <li ngClass="nav__item">
+                <a routerLink="/home" routerLinkActive="active">Accueil</a>             
+            </li>
+            <li ngClass="nav__item" routerLinkActive="active">
+                <a routerLink="/about">À-propos</a> 
+            </li>
+            <li ngClass="nav__item" routerLinkActive="active">
+                <a routerLink="/contact">Contact</a> 
+            </li>
+        </ul>
+    </nav>
+</header>

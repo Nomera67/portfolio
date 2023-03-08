@@ -1,0 +1,71 @@
+@use '../../../../styles.scss' as *;
+
+
+
+.heroe{
+    height: 80vh;
+    margin:  $header-size auto 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    &__presentation{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &>p{
+            font-size: $welcome-size;
+            animation: $heroe-appearence ease-in-out 1s 1 heroeAppear;
+            animation-fill-mode: backwards;
+        }
+        &>h1{
+            animation: $heroe-appearence ease-in-out 1.5s 1 heroeAppear;
+            animation-fill-mode: backwards;
+        }
+        &>h1, >h2{
+            font-size: $heroe-title-size;
+        }
+        &>h2{
+            animation: $heroe-appearence ease-in-out 2s 1 heroeAppear;
+            animation-fill-mode: backwards;
+        }
+    }
+    &__contact{
+        display: flex;
+        &__container{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            justify-content: flex-end;
+            height: 190px;
+            &>address{
+                transition: all .4s ease-in-out;
+                animation: $heroe-appearence ease-in-out 1.5s 1 heroeAppear;
+                animation-fill-mode: backwards;
+                &:hover{
+                    color: $hover-color;
+                }
+            }
+            &>button{
+                font-family: Poppins;
+                border: 1px solid $hover-color;
+                background: transparent;
+                color: $hover-color;
+                padding: 10px 5px;
+                border-radius: 20px;
+                cursor: pointer;
+                transition: all .4s ease-in-out;
+                animation: $heroe-appearence ease-in-out 2s 1 heroeAppear;
+                animation-fill-mode: backwards;
+                &:hover{
+                    background: $hover-color;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+.spanColor{
+    color: $hover-color;
+}

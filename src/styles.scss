@@ -1,0 +1,169 @@
+//Font import
+
+@font-face {
+    font-family: Yellowtail;
+    src: url(assets/fonts/Yellowtail-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(assets/fonts/Poppins-Regular.ttf) format('truetype');
+}
+
+//reset
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+//Variables
+
+$nav-size: 1rem;
+$header-size: 3.5rem;
+$logo-size: 1.5rem;
+$hover-color: #15EAD5;
+$nav-toggle-color: rgba(52, 58, 64, .5);
+$heroe-title-size: 4rem;
+$welcome-size: 2rem;
+
+//duration variables
+
+$nav-appearence: 1.2s;
+$heroe-appearence: 1s;
+
+
+//Common style
+body{
+    background-color: black;
+    color: white;
+    font-family: Poppins;
+}
+
+//Scrollbar style
+*::-webkit-scrollbar {
+    width: 5px;
+}
+*::-webkit-scrollbar-thumb{
+    scrollbar-width: 5px;
+    background: $hover-color;
+    border-radius: 1px;
+}
+*::-webkit-scrollbar-track{
+    background: rgb(8, 8, 8);
+}
+
+//Keyframes 
+//Projects section appear animation
+@keyframes projectsAppear {
+    from{
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+//heroe section main page animation
+@keyframes heroeAppear {
+    from{
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+//Background movement for projects section's background
+@keyframes movingBackground {
+    from{
+        background-position: 36% 42%;
+        background-size: 200%;
+    }
+    20%{
+        background-position: 30% 35%;
+        background-size: 200%;
+    }
+    20.0001%{
+        background-position: 60% 85%;
+        background-size: 500%;
+    }
+    40%{
+        background-position: 80% 42%;
+        background-size: 500%;
+    }
+    40.0001%{
+        background-position: 80% 42%;
+        background-size: 300%;
+    }
+    60%{
+        background-position: 0% 0%;
+        background-size: 300%;
+    }
+    60.0001%{
+        background-position: 100% 100%;
+        background-size: 250%;
+    }
+    80%{
+        background-position: 81% 93%;
+        background-size: 250%;
+    }
+    80.0001%{
+        background-position: 20% 25%;
+        background-size: 350%;
+    }
+    100%{
+        background-position: 45% 43%;
+        background-size: 350%;
+    }   
+}
+
+@keyframes movingBackgroundReverse {
+    100%{
+        background-position: 36% 42%;
+        background-size: 200%;
+    }
+    80.0001%{
+        background-position: 30% 35%;
+        background-size: 200%;
+    }
+    80%{
+        background-position: 60% 85%;
+        background-size: 500%;
+    }
+    60.0001%{
+        background-position: 80% 42%;
+        background-size: 500%;
+    }
+    60%{
+        background-position: 80% 42%;
+        background-size: 300%;
+    }
+    40.0001%{
+        background-position: 0% 0%;
+        background-size: 300%;
+    }
+    40%{
+        background-position: 100% 100%;
+        background-size: 250%;
+    }
+    20.0001%{
+        background-position: 81% 93%;
+        background-size: 250%;
+    }
+    20%{
+        background-position: 20% 25%;
+        background-size: 350%;
+    }
+    0%{
+        background-position: 45% 43%;
+        background-size: 350%;
+    }
+    
+}
