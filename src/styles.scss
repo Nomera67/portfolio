@@ -28,6 +28,8 @@ $hover-color: #15EAD5;
 $nav-toggle-color: rgba(52, 58, 64, .5);
 $heroe-title-size: 4rem;
 $welcome-size: 2rem;
+$introduction-title-size: 3rem;
+$introduction-subtitle-size: 1.5rem;
 
 //duration variables
 
@@ -166,4 +168,19 @@ body{
         background-size: 350%;
     }
     
+}
+
+//Introduction section keyframes
+//Profil picture appearence
+@keyframes introductionAppear {
+    from{
+        opacity: 0;
+        transform: scale(.9);
+        border-radius: 0%;
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+        border-radius: 30% 15% 30% 15%;
+    }
 }

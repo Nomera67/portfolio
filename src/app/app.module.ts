@@ -11,6 +11,9 @@ import { ContactComponent } from './features/contact/contact.component';
 import { ClipboardModule } from 'ngx-clipboard';
 import { HeroeComponent } from './features/homepage/heroe/heroe.component';
 import { ProjectsComponent } from './features/homepage/projects/projects.component';
+import { IntroductionComponent } from './features/about/introduction/introduction.component';
+import { ResumeComponent } from './features/about/resume/resume.component';
+import { SkillsComponent } from './features/about/skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { ProjectsComponent } from './features/homepage/projects/projects.compone
     AboutComponent,
     ContactComponent,
     HeroeComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    IntroductionComponent,
+    ResumeComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,

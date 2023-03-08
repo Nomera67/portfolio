@@ -1,0 +1,45 @@
+@use '../../../../styles.scss' as *;
+
+.resume{
+    display: flex;
+    flex-direction: row;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 20px;
+    &__title{
+        position: sticky;
+        top: $header-size;
+        height: fit-content;
+    }
+    &__container{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        flex: 1;
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        &>h3{
+            font-size: 1.2rem;
+        }
+        &>p{
+
+        }
+        &>ul{
+            list-style-type: '- ';
+            padding-left: 40px;
+        }
+    }
+    &__bar{
+        height: 1px;
+        margin: 0 auto;
+        width: 60%;
+        background-color: $hover-color;
+    }
+}
+
+span{
+    color: $hover-color;
+}

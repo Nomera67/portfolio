@@ -1,0 +1,64 @@
+@use '../../../../styles.scss' as *;
+
+.introduction{
+    &__main{
+        display: flex;
+        justify-content: center;
+        gap: 10%;
+        align-items: center;
+        height: 80vh;
+    }
+    &__title{
+        max-width: 40%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: left;
+        &>h1{
+            font-size: $introduction-title-size;
+            animation: 2s linear backwards 1s titleAppear;
+            &>span{
+                color: $hover-color;
+            }
+        }
+        &>p{
+            font-size: $introduction-subtitle-size;
+            animation: 2s linear backwards 1s subtitleAppear;
+            &>span{
+                color: $hover-color;
+            }
+        }
+    }
+    &__img{
+        height: 350px;
+        width: 350px;
+        border-radius: 30% 15% 30% 15%;
+        background-size: contain;
+        background-image: url('../../../../assets/profil-picture/author.png');
+        position: relative;
+        overflow: hidden;
+        animation: 2s linear backwards 1s introductionAppear;
+    }
+}
+
+@keyframes titleAppear {
+    from{
+        opacity: 0;
+        transform: translateX(-20%);
+    }   
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    } 
+}
+
+@keyframes subtitleAppear {
+    from{
+        opacity: 0;
+        transform: translateY(-20%);
+    }   
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    } 
+}
