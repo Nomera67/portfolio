@@ -1,0 +1,94 @@
+@use '../../../../styles.scss' as *;
+
+.resume{
+    display: flex;
+    flex-direction: row;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 30px;
+    &__title{
+        position: sticky;
+        top: $header-size;
+        height: fit-content;
+        line-height: 1.1;
+        animation: 2s linear backwards 1s titleResumeAppear;
+    }
+    &__container{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        flex: 1;
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        &>h3{
+            font-size: 1.2rem;
+            animation: 2s linear backwards 1s h3ResumeAppear;
+        }
+        &>p{
+            animation: 1.5s linear backwards 1.5s ulPResumeAppear;
+        }
+        &>ul{
+            list-style-type: '- ';
+            padding-left: 40px;
+            animation: 1.5s linear backwards 1.5s ulPResumeAppear;
+        }
+    }
+    &__bar{
+        height: 1px;
+        margin: 0 auto;
+        width: 60%;
+        background-color: $hover-color;
+        animation: 2s linear backwards 1s barAppear;
+    }
+}
+
+span{
+    color: $hover-color;
+}
+
+@keyframes titleResumeAppear {
+    0%{
+        opacity: 0;
+        transform: translateX(-30%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes h3ResumeAppear {
+    0%{
+        opacity: 0;
+        transform: translateY(-30%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes ulPResumeAppear {
+    0%{
+        opacity: 0;
+        transform: translateX(20%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes barAppear {
+    0%{
+        opacity: 0;
+        width: 0%;;
+    }
+    100%{
+        opacity: 1;
+        width: 60%;;
+    }
+}

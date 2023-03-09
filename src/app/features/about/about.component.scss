@@ -1,0 +1,8 @@
+@use '../../../styles.scss' as *;
+
+.about{
+    margin: $header-size auto;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
