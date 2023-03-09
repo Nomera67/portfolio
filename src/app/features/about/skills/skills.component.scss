@@ -1,0 +1,91 @@
+@use '../../../../styles.scss' as *;
+
+.skills{
+    display: flex;
+    flex-direction: row;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 17px;
+    &__title{
+        position: sticky;
+        top: $header-size;
+        height: fit-content;
+        line-height: 1.1;
+        animation: 2s linear backwards 1s titleSkillsAppear;
+    }
+    &__container{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        flex: 1;
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        &>h3{
+            font-size: 1.2rem;
+            animation: 2s linear backwards 1s h3SkillsAppear;
+        }
+        &>ul{
+            list-style-type: '- ';
+            padding-left: 40px;
+            animation: 2s linear backwards 1s ulSkillsAppear;
+        }
+    }
+    &__bar{
+        height: 1px;
+        margin: 0 auto;
+        width: 60%;
+        background-color: $hover-color;
+        animation: 2s linear backwards 1s barAppear;
+    }
+}
+
+span{
+    color: $hover-color;
+}
+
+@keyframes titleSkillsAppear {
+    0%{
+        opacity: 0;
+        transform: translateX(-30%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes h3SkillsAppear {
+    0%{
+        opacity: 0;
+        transform: translateY(-30%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes ulSkillsAppear {
+    0%{
+        opacity: 0;
+        transform: translateX(20%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes barAppear {
+    0%{
+        opacity: 0;
+        width: 0%;;
+    }
+    100%{
+        opacity: 1;
+        width: 60%;;
+    }
+}
