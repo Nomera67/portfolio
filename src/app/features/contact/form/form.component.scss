@@ -1,0 +1,105 @@
+@use '../../../../styles.scss' as *;
+
+
+.container{
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.form{
+    padding: 60px 120px;
+    border: 1px solid red;
+    border-radius: 20px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: .1fr repeat(2, 1fr) .1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 15px;
+    &__container{
+        display: flex;
+        justify-content: center;
+    }
+    &__block{
+        &__personnal{
+            grid-area: 1 / 2 / 2 / 4;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            width: 100%;
+            gap: 10px;
+        }
+        &__society{
+            grid-area: 2 / 2 / 3 / 4;
+            display: flex;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+    &__item{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        &>input{
+            height: 80%;
+        }
+        >label{
+            width: 100px;
+        }
+    }
+    &__message{
+        grid-area: 3 / 2 / 4 / 4; 
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+        width: 100%;
+        &>label{
+            width: 100px;
+        }
+        &>input{
+            margin-left: 18px;
+            justify-self: flex-end;
+            width: 100%;
+        }
+
+    }
+    &__buttons{
+        grid-area: 4 / 2 / 5 / 4;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        &__submit{
+            
+        }
+        &__cancel{
+            
+        }
+    }
+}
+
+.form__buttons__submit, .form__buttons__cancel{
+    padding: 10px 20px;
+    border-radius: 15px;
+    color: $hover-color;
+    border: 1px solid $hover-color;
+    background-color: transparent;
+    transition: .5s ease-in-out all;
+    cursor: pointer;
+    &:hover{
+        background: $hover-color;
+        color: white;
+        border: 1px solid white;
+    }
+}
+
+input.ng-valid{
+    border: 1px solid #15EAD5;
+}
+
+input.ng-invalid{
+    border: 1px solid red;
+}
