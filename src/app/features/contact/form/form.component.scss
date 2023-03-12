@@ -1,105 +1,134 @@
 @use '../../../../styles.scss' as *;
 
 
-.container{
-    height: 80vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
+
 .form{
-    padding: 60px 120px;
-    border: 1px solid red;
-    border-radius: 20px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: .1fr repeat(2, 1fr) .1fr;
-    grid-template-rows: repeat(4, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 15px;
-    &__container{
-        display: flex;
-        justify-content: center;
-    }
-    &__block{
-        &__personnal{
-            grid-area: 1 / 2 / 2 / 4;
-            display: flex;
-            justify-content: space-between;
-            margin: 0 auto;
-            width: 100%;
-            gap: 10px;
-        }
-        &__society{
-            grid-area: 2 / 2 / 3 / 4;
-            display: flex;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-        }
-    }
-    &__item{
+    &__page{
+        height: calc(100vh + $header-size);
         display: flex;
         flex-direction: row;
         align-items: center;
-        &>input{
-            height: 80%;
-        }
-        >label{
-            width: 100px;
-        }
+        justify-content: center;
+        background-image: url(../../../../assets/backgrounds/pexels-roman-odintsov-8747768.jpg);
+        background-size: cover;
+        background-position: bottom;
+        overflow: hidden;
+    }
+    &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        max-width: 1200px;
+        padding: 40px 60px;
+        border-radius: 30px;
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+        
+    }
+    &__grid1{
+        grid-area: 1/1/2/2;
+        border: 1px solid $hover-color;
+    }
+    &__grid2{
+        grid-area: 1/2/2/3;
+        border: 1px solid $hover-color;
+    }
+    &__grid3{
+        grid-area: 2/1/3/2;
+        border: 1px solid $hover-color;
+    }
+    &__grid4{
+        grid-area: 2/2/3/3;
+        border: 1px solid $hover-color;
+    }
+    &__grid5{
+        grid-area: 3/1/4/3;
+        border: 1px solid $hover-color;
+    }
+    &__grid6{
+        grid-area: 4/1/5/3;
     }
     &__message{
-        grid-area: 3 / 2 / 4 / 4; 
-        display: flex;
-        flex-direction: row;
-        margin: 0 auto;
-        width: 100%;
         &>label{
-            width: 100px;
+            &>input{
+                width: 100%;
+            }
         }
-        &>input{
-            margin-left: 18px;
-            justify-self: flex-end;
-            width: 100%;
-        }
-
     }
     &__buttons{
-        grid-area: 4 / 2 / 5 / 4;
+        margin: 10px auto;
         display: flex;
+        max-width: 100%;
         flex-direction: row;
-        justify-content: center;
-        gap: 20px;
+        gap: 10px;
         &__submit{
-            
+            &:hover, .form__buttons__submit:focus{
+                box-shadow: inset 0 -4em 0 0 $hover-color;
+                color: white;
+            }
         }
         &__cancel{
-            
+            &:hover, .form__buttons__cancel:focus{
+                box-shadow: inset 0 0 0 2em $hover-color;
+                color: white;
+            }
         }
     }
 }
 
-.form__buttons__submit, .form__buttons__cancel{
+.buttons{
     padding: 10px 20px;
-    border-radius: 15px;
-    color: $hover-color;
-    border: 1px solid $hover-color;
-    background-color: transparent;
-    transition: .5s ease-in-out all;
     cursor: pointer;
-    &:hover{
-        background: $hover-color;
+    background-color: transparent;
+    font-size: 1rem;
+    border: 1px solid $hover-color;
+    color: $hover-color;
+    transition: .2s all linear;
+}
+
+form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+input{
+    padding: 25px 60px;
+    font-size: 1.2rem;
+    transition: .5s box-shadow linear;
+    color: $hover-color;
+    background-color: transparent;
+    border: none;
+    border-radius: none;
+    &::placeholder{
+        color: $hover-color;
+    }
+    &:focus{
+        box-shadow: 
+            inset 50em 0 0 0 $hover-color,
+            inset 50em 0 0 0 $hover-color;
         color: white;
-        border: 1px solid white;
     }
 }
 
-input.ng-valid{
-    border: 1px solid #15EAD5;
-}
-
-input.ng-invalid{
-    border: 1px solid red;
+.acknowledgments{
+    position: absolute;
+    bottom: -80px;
+    right: 5px;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    background: transparent;
+    color: $hover-color;
+    border: 1px solid $hover-color;
+    border-radius: 10px;
+    cursor: pointer;
+    transition:all .3s ease-in-out;
+        &:hover{
+            background: $hover-color;
+            color: white;
+        }
 }

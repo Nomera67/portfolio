@@ -1,36 +1,47 @@
-<div ngClass="container">
-    <form #contactForm="ngForm" ngClass="form" action="https://mailthis.to/y.rechtenstein@gmail.com" method="POST">
-
-        <div ngClass="form__block__personnal">
-            <div ngClass="form__item">
-                <label for="name">Nom :</label>
-                <input type="text" id="name" name="Nom" placeholder="Matin" required>
+<div class="form__page">
+    <div class="form__container">
+        <h1>Une bouteille à la mer</h1>
+        <form #contactForm="ngForm" ngClass="form" method="POST">          
+            <div ngClass="form__item form__grid1">
+                <label for="name">
+                    <input type="text" id="name" name="Nom" placeholder="Matin" required #name>
+                </label>  
             </div>
-            <div ngClass="form__item">
-                <label for="surname">Prénom :</label>
-                <input type="text" id="surname" name="Prénom" placeholder="Martin" required>
-            </div>   
-                      
-        </div>
-
-        <div ngClass="form__block__society">
-            <div ngClass="form__item">
-                <label for="email">Email :</label>
-                <input type="email" id="email" name="Email" placeholder="aventure@inc.fr" required>
-            </div>   
-            <div ngClass="form__item">
-                <label for="society">Société :</label>
-                <input type="text" id="society" name="Société" placeholder="Morning Company">
+            <div ngClass="form__item form__grid2">
+                <label for="surname">
+                    <input type="text" id="surname" name="Prénom" placeholder="Martin" required>
+                </label> 
             </div>  
-        </div>
-    
-    <div ngClass="form__message">
-        <label for="message">Message :</label>
-        <input type="textarea" id="message" name="Message" placeholder="Votre message" minlength="10" maxlength="3000" required>
+            <div ngClass="form__item form__grid3">
+                <label for="email">
+                    <input type="email" id="email" name="Email" placeholder="aventure@inc.fr" required>
+                </label>
+            </div>   
+            <div ngClass="form__item form__grid4">
+                <label for="society">
+                    <input type="text" id="society" name="Société" placeholder="Morning Company">
+                </label>
+            </div>  
+            
+            <div ngClass="form__message form__grid5">
+                <label for="message">
+                    <input type="text" id="message" name="Message" placeholder="Votre message" minlength="10" maxlength="3000" required>
+                </label>
+            </div>
+            <div ngClass="form__buttons form__grid6">
+                <button ngClass="form__buttons__submit buttons" type="submit" [disabled]="! contactForm.form.valid" value="send">Envoyer</button>
+                <button ngClass="form__buttons__cancel buttons" type="button">Annuler</button>
+            </div>
+        </form>
     </div>
-    <div ngClass="form__buttons">
-        <button ngClass="form__buttons__submit" type="submit" [disabled]="! contactForm.form.valid" value="send">Envoyer</button>
-        <button ngClass="form__buttons__cancel" type="button">Annuler</button>
-    </div>
-</form>
+    <a href="https://www.pexels.com/fr-fr/@roman-odintsov/" ngClass="acknowledgments">photo par Roman Odintsov</a>
 </div>
+
+
+
+
+
+
+
+
+<!-- action="https://mailthis.to/y.rechtenstein@gmail.com" -->

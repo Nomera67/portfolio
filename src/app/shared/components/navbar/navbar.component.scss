@@ -27,6 +27,7 @@ header{
     z-index: 5;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(.5rem);
+    overflow: visible;
 }
 .logo{
     font-family: Yellowtail;
