@@ -4,15 +4,15 @@
 
 .form{
     &__page{
-        height: calc(100vh + $header-size);
+        height: 100vh;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
         background-image: url(../../../../assets/backgrounds/pexels-roman-odintsov-8747768.jpg);
         background-size: cover;
-        background-position: bottom;
-        overflow: hidden;
+        background-position: center;
+        position: relative;
     }
     &__container{
         display: flex;
@@ -116,7 +116,7 @@ input{
 
 .acknowledgments{
     position: absolute;
-    bottom: -80px;
+    bottom: 5px;
     right: 5px;
     padding: 5px 10px;
     text-decoration: none;
