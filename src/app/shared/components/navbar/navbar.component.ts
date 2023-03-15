@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -7,6 +8,8 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  constructor(private _router: Router){}
+  
   toggleNav(){
     const primaryNav = document.getElementById("primary-navigation");
     const toggleButton = document.getElementById('toggleButton');
@@ -17,5 +20,9 @@ export class NavbarComponent {
       primaryNav?.setAttribute("data-visible", "false");
       toggleButton?.setAttribute("aria-expanded", "false")
     }
+  }
+
+  homecoming(){
+    this._router.navigate(['/'])
   }
 }

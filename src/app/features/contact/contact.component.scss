@@ -1,0 +1,7 @@
+@use '../../../styles.scss' as *;
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    max-height: fit-content;
+}

@@ -1,0 +1,45 @@
+<div ngClass="form__page">
+    <div ngClass="form__container">
+        <h1 ngClass="form__title">
+            <span>Let's</span>
+            <span>get</span> 
+            <span>in</span>
+            <span>touch</span>
+        </h1>
+        <form #contactForm="ngForm" ngClass="form" (ngSubmit)="contactSubmit(contactForm)">
+            <div ngClass="form__item form__grid1">
+                <label for="name">
+                    <input type="text" id="name" name="name" placeholder="Nom *" ng-pattern="/^[a-zA-ZÀ-ÿ\s]*$/" [(ngModel)]="contactName" required #name>
+                </label>
+            </div>
+            <div ngClass="form__item form__grid2">
+                <label for="surname">
+                    <input type="text" id="surname" name="surname" placeholder="Prénom *" ng-pattern="/^[a-zA-ZÀ-ÿ\s]*$/" [(ngModel)]="contactSurname" required>
+                </label> 
+            </div>  
+            <div ngClass="form__item form__grid3">
+                
+                <label for="email">
+                    <input type="email" id="email" name="email" placeholder="Votre email *" ng-pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" [(ngModel)]="contactEmail" #email="ngModel" required>
+                </label>
+            </div>   
+            <div ngClass="form__item form__grid4">
+                <label for="society">
+                    <input type="text" id="society" name="society" placeholder="Votre société" [(ngModel)]="contactSociety">
+                </label>
+            </div>  
+            
+            <div ngClass="form__message form__grid5">
+                <label for="message">
+                    <input type="text" id="message" name="message" placeholder="Votre message *" ng-pattern="/^[a-zA-ZÀ-ÿ0-9\s',.!?-]{10,3000}$/" minlength="10" maxlength="3000" [(ngModel)]="contactMessage" required>
+                </label>
+            </div>
+            <div ngClass="form__buttons form__grid6">
+                <button ngClass="form__buttons__submit buttons" type="submit" [disabled]="! contactForm.valid" value="Send Email" aria-label="Envoyer le message">Envoyer</button>
+                <button ngClass="form__buttons__cancel buttons" type="reset" value="Reset" aria-label="Annuler le formulaire">Annuler</button>
+            </div>
+        </form>
+        <span ngClass="form__need">* : Champs obligatoires</span>
+    </div>
+    <a href="https://unsplash.com/fr/@markuslaanisto" ngClass="acknowledgments" aria-label="Accéder au profil Unsplash de l'auteur">photo par Markus Laanisto</a>
+</div>

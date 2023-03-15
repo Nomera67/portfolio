@@ -14,6 +14,9 @@ import { ProjectsComponent } from './features/homepage/projects/projects.compone
 import { IntroductionComponent } from './features/about/introduction/introduction.component';
 import { ResumeComponent } from './features/about/resume/resume.component';
 import { SkillsComponent } from './features/about/skills/skills.component';
+import { FormComponent } from './features/contact/form/form.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,12 +30,15 @@ import { SkillsComponent } from './features/about/skills/skills.component';
     ProjectsComponent,
     IntroductionComponent,
     ResumeComponent,
-    SkillsComponent
+    SkillsComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ClipboardModule,
+    FormsModule,
+    HttpClientModule,
   ],
   exports: [
     ClipboardModule
