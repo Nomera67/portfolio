@@ -16,6 +16,7 @@ import { ResumeComponent } from './features/about/resume/resume.component';
 import { SkillsComponent } from './features/about/skills/skills.component';
 import { FormComponent } from './features/contact/form/form.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     ClipboardModule,
     FormsModule,
+    HttpClientModule,
   ],
   exports: [
     ClipboardModule

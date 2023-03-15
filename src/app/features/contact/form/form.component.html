@@ -1,40 +1,45 @@
-<div class="form__page">
-    <div class="form__container">
-        <h1>Une bouteille à la mer</h1>
-        <form #contactForm="ngForm" ngClass="form" method="POST">          
+<div ngClass="form__page">
+    <div ngClass="form__container">
+        <h1 ngClass="form__title">
+            <span>Let's</span>
+            <span>get</span> 
+            <span>in</span>
+            <span>touch</span>
+        </h1>
+        <form #contactForm="ngForm" ngClass="form" (ngSubmit)="contactSubmit(contactForm)">
             <div ngClass="form__item form__grid1">
                 <label for="name">
-                    <input type="text" id="name" name="Nom" placeholder="Matin" required #name>
+                    <input type="text" id="name" name="name" placeholder="Nom" [(ngModel)]="contactName" required #name>
                 </label>  
             </div>
             <div ngClass="form__item form__grid2">
                 <label for="surname">
-                    <input type="text" id="surname" name="Prénom" placeholder="Martin" required>
+                    <input type="text" id="surname" name="surname" placeholder="Prénom" [(ngModel)]="contactSurname" required>
                 </label> 
             </div>  
             <div ngClass="form__item form__grid3">
                 <label for="email">
-                    <input type="email" id="email" name="Email" placeholder="aventure@inc.fr" required>
+                    <input type="email" id="email" name="email" placeholder="Votre email" [(ngModel)]="contactEmail" required>
                 </label>
             </div>   
             <div ngClass="form__item form__grid4">
                 <label for="society">
-                    <input type="text" id="society" name="Société" placeholder="Morning Company">
+                    <input type="text" id="society" name="society" placeholder="Votre société" [(ngModel)]="contactSociety">
                 </label>
             </div>  
             
             <div ngClass="form__message form__grid5">
                 <label for="message">
-                    <input type="text" id="message" name="Message" placeholder="Votre message" minlength="10" maxlength="3000" required>
+                    <input type="text" id="message" name="message" placeholder="Votre message" minlength="10" maxlength="3000" [(ngModel)]="contactMessage" required>
                 </label>
             </div>
             <div ngClass="form__buttons form__grid6">
-                <button ngClass="form__buttons__submit buttons" type="submit" [disabled]="! contactForm.form.valid" value="send">Envoyer</button>
-                <button ngClass="form__buttons__cancel buttons" type="button">Annuler</button>
+                <button ngClass="form__buttons__submit buttons" type="submit" value="Send Email">Envoyer</button>
+                <button ngClass="form__buttons__cancel buttons" type="reset" value="Reset">Annuler</button>
             </div>
         </form>
     </div>
-    <a href="https://www.pexels.com/fr-fr/@roman-odintsov/" ngClass="acknowledgments">photo par Roman Odintsov</a>
+    <a href="https://unsplash.com/fr/@markuslaanisto" ngClass="acknowledgments">photo par Markus Laanisto</a>
 </div>
 
 
