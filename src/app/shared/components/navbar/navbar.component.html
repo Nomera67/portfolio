@@ -10,14 +10,16 @@
     <nav ngClass="navBar">
         <ul id="primary-navigation" data-visible="false" ngClass="nav__list">
             <li ngClass="nav__item">
-                <a routerLink="/home" routerLinkActive="active">Accueil</a>             
+                <a routerLink="/home" routerLinkActive="active" ngClass="nav__link">Accueil</a>             
             </li>
             <li ngClass="nav__item" routerLinkActive="active">
-                <a routerLink="/about">À-propos</a> 
+                <a routerLink="/about" ngClass="nav__link">À-propos</a> 
             </li>
             <li ngClass="nav__item" routerLinkActive="active">
-                <a routerLink="/contact">Contact</a> 
+                <a routerLink="/contact" ngClass="nav__link">Contact</a> 
             </li>
+            <div ngClass="nav__list__points"></div>
+            <div ngClass="nav__list__background"></div>
         </ul>
     </nav>
 </header>
