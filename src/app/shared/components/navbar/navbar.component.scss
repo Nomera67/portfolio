@@ -115,10 +115,11 @@ header{
             width: 100%;
             left: 0;
             top: 0;
+            background-position: center 0%;
             background-image: radial-gradient(rgba(255, 255, 255, 0.1) 9%, transparent 9%);
             background-size: 3vmin 3vmin;
             z-index: 1;
-            transition: opacity 800ms ease, background-size 800ms ease;
+            transition: opacity 800ms ease, background-position 800ms ease-in-out;
         }
         &__background{
             display: block;
@@ -127,13 +128,32 @@ header{
             width: 100%;
             left: 0;
             top: 0;
-            background-position: center 40%;
+            background-position: center 30%;
             opacity: 0.8;
             z-index: -1;
             background-size: 110vmax;
             background-image: url('https://images.unsplash.com/photo-1513569771920-c9e1d31714af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80');
             transition: all 800ms ease;
         }
+    }
+
+    .nav__list[data-active-index="0"] > .nav__list__points{
+        background-position: center 20%;
+    }
+    .nav__list[data-active-index="0"] > #background__menu{
+        background-position: center 40%;
+    }
+    .nav__list[data-active-index="1"] > .nav__list__points{
+        background-position: center 40%;
+    }
+    .nav__list[data-active-index="1"] > #background__menu{
+        background-position: center 50%;
+    }
+    .nav__list[data-active-index="2"] > .nav__list__points{
+        background-position: center 60%;
+    }
+    .nav__list[data-active-index="2"] > #background__menu{
+        background-position: center 60%;
     }
 
     .nav__list:hover > .nav__item > .nav__link{
@@ -145,7 +165,6 @@ header{
     }
 
     .nav__item:hover ~ .nav__list__points{
-        background-size: 5vmin 5vmin;
         opacity: 0.5;
     }
     .nav__item:hover ~ .nav__list__background{

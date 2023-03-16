@@ -7,9 +7,9 @@
         <span class="toggle__line"></span>
         <span class="toggle__line"></span>
     </button>
-    <nav ngClass="navBar">
-        <ul id="primary-navigation" data-visible="false" ngClass="nav__list">
-            <li ngClass="nav__item">
+    <nav ngClass="navBar" id="navBar">
+        <ul id="primary-navigation" data-visible="false" ngClass="nav__list" (mouseenter)="backgroundMove()">
+            <li ngClass="nav__item" >
                 <a routerLink="/home" routerLinkActive="active" ngClass="nav__link">Accueil</a>             
             </li>
             <li ngClass="nav__item" routerLinkActive="active">
@@ -19,7 +19,7 @@
                 <a routerLink="/contact" ngClass="nav__link">Contact</a> 
             </li>
             <div ngClass="nav__list__points"></div>
-            <div ngClass="nav__list__background"></div>
+            <div ngClass="nav__list__background" id="background__menu"></div>
         </ul>
     </nav>
 </header>
