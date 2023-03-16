@@ -12,6 +12,7 @@
         height: fit-content;
         line-height: 1.1;
         animation: 2s linear backwards 1s titleSkillsAppear;
+        font-size: clamp(1.1rem, 3vw, 1.3rem);
     }
     &__container{
         display: flex;
@@ -24,13 +25,14 @@
         flex-direction: column;
         gap: 5px;
         &>h3{
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 3vw, 1.2rem);
             animation: 2s linear backwards 1s h3SkillsAppear;
         }
         &>ul{
             list-style-type: '- ';
             padding-left: 40px;
             animation: 2s linear backwards 1s ulSkillsAppear;
+            font-size: clamp(.8rem, 3vw, 1rem);
         }
     }
     &__bar{
@@ -87,5 +89,30 @@ span{
     100%{
         opacity: 1;
         width: 60%;;
+    }
+}
+
+@media (max-width: 830px) {
+    .skills{
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .skills{
+        flex-direction: column;
+        &__title{
+            position: inherit;
+            align-self: center;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .skills{
+        width: 100%;
+        &__title{
+            position: inherit;
+        }
     }
 }

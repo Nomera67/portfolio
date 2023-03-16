@@ -26,10 +26,10 @@ $header-size: 3.5rem;
 $logo-size: 1.5rem;
 $hover-color: #15EAD5;
 $nav-toggle-color: rgba(52, 58, 64, .5);
-$heroe-title-size: 4rem;
-$welcome-size: 2rem;
-$introduction-title-size: 3rem;
-$introduction-subtitle-size: 1.5rem;
+$heroe-title-size: clamp(2rem, 5vw, 4rem);
+$welcome-size: clamp(1rem, 3vw, 2rem);
+$introduction-title-size: clamp(1.5rem, 5vw, 3rem);
+$introduction-subtitle-size: clamp(1rem, 3vw, 1.5rem);
 
 //duration variables
 
