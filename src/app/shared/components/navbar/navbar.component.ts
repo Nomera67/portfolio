@@ -25,4 +25,15 @@ export class NavbarComponent {
   homecoming(){
     this._router.navigate(['/'])
   }
+
+  backgroundMove(){
+    const primaryNav = document.getElementById("primary-navigation");
+    const items = Array.from(document.querySelectorAll(".nav__item"));
+    items.forEach((item, index) => {
+      item.addEventListener("mouseover", () => {
+        primaryNav?.setAttribute("data-active-index", index.toString());
+        console.log(index.toString())
+      })
+    })
+  }
 }
