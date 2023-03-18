@@ -13,6 +13,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        height: 100%;
         &>p{
             font-size: $welcome-size;
             animation: $heroe-appearence ease-in-out 1s 1 heroeAppear;
@@ -38,6 +39,7 @@
             gap: 5px;
             justify-content: flex-end;
             height: 190px;
+            font-size: clamp(0.8rem, 2vw, 1rem);
             &>address{
                 transition: all .4s ease-in-out;
                 animation: $heroe-appearence ease-in-out 1.5s 1 heroeAppear;
@@ -68,4 +70,24 @@
 
 .spanColor{
     color: $hover-color;
+}
+
+@media (max-width: 1000px) {
+    .heroe{
+        flex-direction: column;
+        height: 70vh;
+        margin:  $header-size 20px $header-size 20px;
+        gap: 20px;
+        &__presentation{
+            align-self: flex-start;
+        }
+        &__contact{
+            align-self: flex-end;
+            justify-self: center;
+            height: fit-content;
+            &__container{
+                height: fit-content;
+            }
+        }
+    }
 }

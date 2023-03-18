@@ -15,7 +15,7 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        font-size: 2rem;
+        font-size: clamp(1.5rem, 3vw, 2rem);
         font-family: Yellowtail;
         animation: $heroe-appearence ease-in-out 2.5s 1 projectsAppear;
         animation-fill-mode: backwards;
@@ -98,6 +98,16 @@
         &>a{
             &>img{
                 width: 32px;
+            }
+        }
+    }
+}
+
+@media (max-width: 900px){
+    .projects{
+        &__item{
+            &:hover{
+                transform: scale(1);
             }
         }
     }
