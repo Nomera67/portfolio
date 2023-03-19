@@ -120,6 +120,7 @@
         justify-content: center;
         &>span{
             display: inline-block;
+            overflow: visible;
         }
         & :nth-child(1n){
             display: inline-block;

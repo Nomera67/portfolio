@@ -105,10 +105,16 @@
 
 @media (max-width: 900px){
     .projects{
+        &__description{
+            gap: 10px;
+        }
         &__item{
             &:hover{
                 transform: scale(1);
             }
+        }
+        &__links{
+            margin-top: 20px;
         }
     }
 }
