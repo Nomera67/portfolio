@@ -92,9 +92,49 @@ span{
     }
 }
 
+//keyframes media queries
+
+@keyframes titleSkillsMqAppear {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes h3SkillsMqAppear {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes ulSkillsMqAppear {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 @media (max-width: 830px) {
     .skills{
         padding: 0 10px;
+        &__title{
+            animation: 2s linear backwards 1s titleSkillsMqAppear;
+        }
+        &__item{
+            &>h3{
+                animation: 2s linear backwards 1s h3SkillsMqAppear;
+            }
+            &>ul{
+                animation: 2s linear backwards 1s ulSkillsMqAppear;
+            }
+        }
     }
 }
 
