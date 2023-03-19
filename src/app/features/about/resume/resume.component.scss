@@ -96,9 +96,52 @@ span{
     }
 }
 
+//Media queries keyframes 
+
+@keyframes titleResumeMqAppear {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes h3ResumeMqAppear {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes ulPResumeMqAppear {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 @media (max-width: 830px) {
     .resume{
         padding: 0 10px;
+        &__title{
+            animation: 2s linear backwards 1s titleResumeMqAppear;
+        }
+        &__item{
+            &>h3{
+                animation: 2s linear backwards 1s h3ResumeMqAppear;
+            }
+            &>p{
+                animation: 1.5s linear backwards 1.5s ulPResumeMqAppear;
+            }
+            &>ul{
+                animation: 1.5s linear backwards 1.5s ulPResumeMqAppear;
+            }
+        }
     }
 }
 
@@ -109,6 +152,7 @@ span{
             position: inherit;
             align-self: center;
         }
+
     }
 }
 

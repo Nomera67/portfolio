@@ -113,9 +113,14 @@
     &__title{
         font-family: Yellowtail;
         font-size: clamp(.75rem, 10vw, 3.5rem);
+        width: 100%;
         display: flex;
         flex-direction: row;
         gap: 15px;
+        justify-content: center;
+        &>span{
+            display: inline-block;
+        }
         & :nth-child(1n){
             display: inline-block;
         }
