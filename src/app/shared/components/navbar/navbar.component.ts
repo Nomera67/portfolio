@@ -10,15 +10,17 @@ export class NavbarComponent {
 
   constructor(private _router: Router){}
   
+
+  //toggle to on/off navbar
   toggleNav(){
     const primaryNav = document.getElementById("primary-navigation");
     const toggleButton = document.getElementById('toggleButton');
-    if(primaryNav?.getAttribute("data-visible") === "false"){
-      primaryNav.setAttribute("data-visible", "true");
-      toggleButton?.setAttribute("aria-expanded", "true");
+    if(primaryNav?.getAttribute("data-visible") === "false"){ //if navbar is not visible
+      primaryNav.setAttribute("data-visible", "true"); //let it appear with the attribute
+      toggleButton?.setAttribute("aria-expanded", "true"); //and tell it to screen readers
     } else {
-      primaryNav?.setAttribute("data-visible", "false");
-      toggleButton?.setAttribute("aria-expanded", "false")
+      primaryNav?.setAttribute("data-visible", "false"); //else let it disappear with removing the attribute
+      toggleButton?.setAttribute("aria-expanded", "false") //and tell it to screen readers
     }
   }
 
@@ -29,10 +31,9 @@ export class NavbarComponent {
   backgroundMove(){
     const primaryNav = document.getElementById("primary-navigation");
     const items = Array.from(document.querySelectorAll(".nav__item"));
-    items.forEach((item, index) => {
-      item.addEventListener("mouseover", () => {
-        primaryNav?.setAttribute("data-active-index", index.toString());
-        console.log(index.toString())
+    items.forEach((item, index) => { //For each item of the navbar, use his index
+      item.addEventListener("mouseover", () => { //if the mouse is over it
+        primaryNav?.setAttribute("data-active-index", index.toString()); //use his index into the data-active-index of the primary navigation bar 
       })
     })
   }
