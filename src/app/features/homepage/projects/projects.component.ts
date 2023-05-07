@@ -19,15 +19,23 @@ export class ProjectsComponent {
     {
       name: 'Art Hover',
       description: 'Un projet simple d\'utilisation de l\'API du Metropolitan Museum of Art avec un affichage aléatoire de tableaux à découvrir',
-      picture: '../../../../assets/pictures-portfolio/Arthover.PNG',
-      technologies:'Angular, TypeScript, JavaScript, SCSS, GitHub',
+      picture: '../../../../assets/pictures-portfolio/Arthover-light.jpg',
+      technologies: 'Angular, TypeScript, API, JavaScript, SCSS, GitHub',
       github: 'https://github.com/Nomera67/art-hover',
       directory: 'https://www.arthover.yrdev.fr/'
     },
     {
+      name: 'Visit Panama',
+      description:'Visit Panama est toujours en cours de développement mais vise à être un site sur le tourisme au Panama',
+      picture: '../../../../assets/pictures-portfolio/Panama-light.jpg',
+      technologies: 'Angular, TypeScript, SCSS, GitHub',
+      github: 'https://github.com/Nomera67/visit-panama',
+      directory: 'https://panama.yrdev.fr/',
+    },
+    {
       name: 'Intégration Finsweet',
       description: `L'intégration d'une maquette Figma`,
-      picture: '../../../../assets/pictures-portfolio/Finsweet.PNG',
+      picture: '../../../../assets/pictures-portfolio/Finsweet-light.jpg',
       technologies: 'HTML5, SCSS, JavaScript, Flexbox, Grid',
       github: 'https://github.com/Nomera67/Finsweet-Blog',
       directory: 'https://nomera67.github.io/Finsweet-Blog/',
