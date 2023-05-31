@@ -9,6 +9,7 @@ import { ProjectsItems } from 'src/app/models/projects-items';
 export class ProjectsComponent {
   projetList: ProjectsItems[] = [
     {
+      id: 100,
       name: 'Portfolio',
       description: 'Le portfolio sur lequel vous êtes et qui me permet de mettre en avant mes différents projets passés et à venir',
       picture: '../../../../assets/pictures-portfolio/Portfolio.PNG',
@@ -17,6 +18,7 @@ export class ProjectsComponent {
       directory: 'https://www.yrdev.fr',
     },
     {
+      id: 101,
       name: 'Art Hover',
       description: 'Un projet simple d\'utilisation de l\'API du Metropolitan Museum of Art avec un affichage aléatoire de tableaux à découvrir',
       picture: '../../../../assets/pictures-portfolio/Arthover-light.jpg',
@@ -25,14 +27,16 @@ export class ProjectsComponent {
       directory: 'https://www.arthover.yrdev.fr/'
     },
     {
+      id: 102,
       name: 'Visit Panama',
-      description:'Visit Panama est toujours en cours de développement mais vise à être un site sur le tourisme au Panama',
+      description:'Visit Panama permet d\'avoir un aperçu d\'une plateforme dédié au tourisme au Panama avec plusieurs effets de parallaxe',
       picture: '../../../../assets/pictures-portfolio/Panama-light.jpg',
       technologies: 'Angular, TypeScript, SCSS, GitHub',
       github: 'https://github.com/Nomera67/visit-panama',
       directory: 'https://panama.yrdev.fr/',
     },
     {
+      id: 103,
       name: 'Intégration Finsweet',
       description: `L'intégration d'une maquette Figma`,
       picture: '../../../../assets/pictures-portfolio/Finsweet-light.jpg',
@@ -41,6 +45,7 @@ export class ProjectsComponent {
       directory: 'https://nomera67.github.io/Finsweet-Blog/',
     },
     {
+      id: 104,
       name: 'Projet à venir',
       description: '',
       picture: 'https://images.pexels.com/photos/356079/pexels-photo-356079.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
@@ -48,6 +53,10 @@ export class ProjectsComponent {
       github: '',
       directory: '',
     }
-  ]
+  ];
+
+  toProject(){
+    
+  }
 
 }
