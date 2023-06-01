@@ -1,6 +1,17 @@
 <div ngClass="card__container">
     <h1 ngClass="card__title">{{projet.name}}</h1>
     <div ngClass="card__project">
-        
+        <img src="{{projet.picture}}" alt="Homepage du projet {{projet.name}}">
+        <div ngClass="card__text">
+            <p>{{projet.description}}</p>
+            <div class="card__technologies">
+                <p>Technologies utilisées :</p>
+                <p>{{projet.technologies}}</p>
+            </div>
+            <div class="card__links">
+                <img src="../../../../../assets/icons/Git-icon-white.svg.png" alt="">
+                <a href="{{projet.directory}}">Visiter</a>
+            </div>
+        </div>
     </div>
 </div>
