@@ -1,7 +1,7 @@
 <div ngClass="projects__component">
     <div ngClass="projects__title"><h2>Mes <span>projets</span></h2></div>
     <div ngClass="projects__container">
-        <article *ngFor="let projet of projetList" ngClass="projects__item" (click)="toProject()">
+        <article *ngFor="let projet of projetList" ngClass="projects__item" (click)="toProject(projet.id.toString())">
             <div style="background-image: url({{projet.picture}});" ngClass="projects__picture"></div>
             <div ngClass="projects__description">
                 <p><span>Nom du projet</span> : {{projet.name}}</p>
