@@ -5,12 +5,12 @@
         <div ngClass="card__text">
             <p>{{projet.description}}</p>
             <div class="card__technologies">
-                <p>Technologies utilisées :</p>
+                <p>Langages:</p>
                 <p>{{projet.technologies}}</p>
             </div>
             <div class="card__links">
-                <img src="../../../../../assets/icons/Git-icon-white.svg.png" alt="">
-                <a href="{{projet.directory}}">Visiter</a>
+                <a href={{projet.github}} target="_blank" ngClass="card__github"><img src="../../../../../assets/icons/Git-icon-white.svg.png" alt=""></a>
+                <a href="{{projet.directory}}" target="_blank" ngClass="card__to">Visiter</a>
             </div>
         </div>
     </div>

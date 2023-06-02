@@ -1,0 +1,76 @@
+@use '../../../../../styles.scss' as *;
+
+.card{
+    &__container{
+        max-width: 1100px;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin: 0 auto;
+        transform: translateY(50%);
+    }
+    &__title{
+        text-align: center;
+    }
+    &__project{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        padding: 0 20px;
+        & > img{
+            display: block;
+            width: 50%;
+        }
+    }
+    &__text{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 20px;
+
+    }
+    &__technologies{
+        display: flex;
+        gap: 10px;
+    }
+    &__links{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+    &__github{
+        width: fit-content;
+        display: grid;
+        align-items: center;
+        & > img{
+            width: 32px;
+        }
+    }
+    &__to{
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+        border: 1px solid $hover-color;
+        padding: 10px 20px;
+        border-radius: 20px;
+        color: $hover-color;
+        transition: all .2s ease-in-out;
+        &:hover{
+            color: white;
+            background-color: $hover-color;
+        }
+    }
+}
+
+@media (width < 855px) {
+    .card{
+        &__project{
+            flex-direction: column;
+            & > img{
+                align-self: center;
+            }
+        }
+    }
+}
