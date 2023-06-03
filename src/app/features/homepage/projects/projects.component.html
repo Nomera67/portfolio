@@ -4,7 +4,7 @@
         <article *ngFor="let projet of projetList" ngClass="projects__item" (click)="toProject(projet.id.toString())">
             <img src="{{projet.picture}}" alt="Aperçu de la page d'accueil de {{projet.name}}">
             <div ngClass="projects__description">
-                <p>{{projet.name}}</p>
+                <h3>{{projet.name}}</h3>
             </div>
         </article>
     </div>

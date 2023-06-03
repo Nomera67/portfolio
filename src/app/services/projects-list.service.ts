@@ -38,7 +38,7 @@ export class ProjectsListService {
     },
     {
       id: 103,
-      name: 'Intégration Finsweet',
+      name: 'Finsweet',
       description: `L'intégration d'une maquette Figma`,
       picture: '../../../../assets/pictures-portfolio/Finsweet-light.jpg',
       technologies: 'HTML5, SCSS, JavaScript, Flexbox, Grid',
