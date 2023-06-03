@@ -61,11 +61,11 @@ body{
 //Projects section appear animation
 @keyframes projectsAppear {
     from{
-        transform: translateY(50%);
+        transform: translateY(-50%);
         opacity: 0;
     }
     100% {
-        transform: translateY(0);
+        transform: translateY(-0);
         opacity: 1;
     }
 }
@@ -80,6 +80,17 @@ body{
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+//appearance of projects 
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }    
 }
 
 //Background movement for projects section's background

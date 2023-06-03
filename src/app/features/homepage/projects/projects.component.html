@@ -1,8 +1,8 @@
 <div ngClass="projects__component">
-    <div ngClass="projects__title"><h2>Mes <span>projets</span></h2></div>
+    <div ngClass="projects__title"><h2 id="projectTitle">Mes <span>projets</span></h2></div>
     <div ngClass="projects__container">
-        <article *ngFor="let projet of projetList" ngClass="projects__item" (click)="toProject(projet.id.toString())">
-            <img src="{{projet.picture}}" alt="Aperçu de la page d'accueil de {{projet.name}}">
+        <article *ngFor="let projet of projetList; let i = index" [ngClass]="{'projects__item': true}" [style.animation-delay]="((i+3) * 500) + 'ms'" (click)="toProject(projet.id.toString())">
+            <img ngClass="projects__pictures" src="{{projet.picture}}" alt="Aperçu de la page d'accueil de {{projet.name}}">
             <div ngClass="projects__description">
                 <h3>{{projet.name}}</h3>
             </div>

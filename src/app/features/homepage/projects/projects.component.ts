@@ -10,14 +10,14 @@ import { ProjectsItems } from 'src/app/models/projects-items';
 })
 export class ProjectsComponent implements OnInit{
 
-  ngOnInit(): void {
-    this.projetList = this.projetListService.projetList
-    
-  }
 
   constructor(public _router: Router, private projetListService: ProjectsListService) {}
 
   projetList: ProjectsItems[] = [];
+
+  ngOnInit(): void {
+    this.projetList = this.projetListService.projetList    
+  }
 
   
 
