@@ -25,6 +25,7 @@ $nav-size: 1rem;
 $header-size: 3.5rem;
 $logo-size: 1.5rem;
 $hover-color: #15EAD5;
+$main-background: black;
 $nav-toggle-color: rgba(52, 58, 64, .5);
 $heroe-title-size: clamp(2rem, 5vw, 4rem);
 $welcome-size: clamp(1rem, 3vw, 2rem);
@@ -39,7 +40,7 @@ $heroe-appearence: 1s;
 
 //Common style
 body{
-    background-color: black;
+    background-color: $main-background;
     color: white;
     font-family: Poppins;
 }

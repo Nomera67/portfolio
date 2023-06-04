@@ -12,7 +12,7 @@ export class ProjectsListService {
     {
       id: 100,
       name: 'Portfolio',
-      description: 'Le portfolio sur lequel vous êtes et qui me permet de mettre en avant mes différents projets passés et à venir',
+      description: 'Ce portfolio me permet de mettre en avant mes projets réalisés tout en gardant une trace de mon évolution et de mes progrès.',
       picture: '../../../../assets/pictures-portfolio/Portfolio.PNG',
       technologies: 'Angular, TypeScript, JavaScript, SCSS, GitHub',
       github: 'https://github.com/Nomera67/portfolio',
@@ -21,7 +21,7 @@ export class ProjectsListService {
     {
       id: 101,
       name: 'Art Hover',
-      description: 'Un projet simple d\'utilisation de l\'API du Metropolitan Museum of Art avec un affichage aléatoire de tableaux à découvrir',
+      description: 'Art Hover prend une liste aléatoire d\'oeuvres grâce à l\'API du Metropolitan Museum of Art de New York pour les afficher de manière ludique.',
       picture: '../../../../assets/pictures-portfolio/Arthover-light.jpg',
       technologies: 'Angular, TypeScript, API, JavaScript, SCSS, GitHub',
       github: 'https://github.com/Nomera67/art-hover',
@@ -30,7 +30,7 @@ export class ProjectsListService {
     {
       id: 102,
       name: 'Visit Panama',
-      description:'Visit Panama permet d\'avoir un aperçu d\'une plateforme dédié au tourisme au Panama avec plusieurs effets de parallaxe',
+      description:'Visit Panama permet d\'avoir un aperçu d\'une plateforme dédiée au tourisme au Panama avec plusieurs effets de parallaxe',
       picture: '../../../../assets/pictures-portfolio/Panama-light.jpg',
       technologies: 'Angular, TypeScript, SCSS, GitHub',
       github: 'https://github.com/Nomera67/visit-panama',
@@ -39,7 +39,7 @@ export class ProjectsListService {
     {
       id: 103,
       name: 'Finsweet',
-      description: `L'intégration d'une maquette Figma`,
+      description: 'Finsweet est l\'intégration simple d\'une maquette Figma.',
       picture: '../../../../assets/pictures-portfolio/Finsweet-light.jpg',
       technologies: 'HTML5, SCSS, JavaScript, Flexbox, Grid',
       github: 'https://github.com/Nomera67/Finsweet-Blog',
