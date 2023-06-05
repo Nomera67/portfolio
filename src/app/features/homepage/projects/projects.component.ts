@@ -19,6 +19,30 @@ export class ProjectsComponent implements OnInit{
     this.projetList = this.projetListService.projetList    
   }
 
+  ngAfterViewInit() {
+    const projectsItem = document.querySelectorAll(".projects__item");
+
+
+    if (projectsItem) {
+      const observerOpacity = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add('is-visible');
+            }, 200);
+          } else {
+            setTimeout(() => {
+              entry.target.classList.remove('is-visible');
+            }, 200);
+          }
+        });
+      });
+
+      projectsItem.forEach(item => {
+        observerOpacity.observe(item);
+      });
+    }
+  }
   
 
   toProject(id: string){

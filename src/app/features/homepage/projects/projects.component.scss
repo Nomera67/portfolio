@@ -1,10 +1,6 @@
 @use '../../../../styles.scss' as *;
 
 
-.is-visible{
-    opacity: 1;
-}
-
 .projects{
     &__component{
         margin: 0 auto;
@@ -22,7 +18,7 @@
         align-items: center;
         font-size: clamp(1.5rem, 3vw, 2rem);
         font-family: Yellowtail;
-        animation: $heroe-appearence 1.25s ease-in-out projectsAppear;
+        animation: $heroe-appearence 1s ease-in-out projectsAppear;
         animation-fill-mode: backwards;
         &>h2{
             &>span{
@@ -45,9 +41,8 @@
         flex-grow: 1;
         border-radius: 20px;
         overflow: hidden;
-        transition: opacity .5s ease-in;
         opacity: 0;
-        animation: fadeIn 1s ease-in-out forwards;
+        transition: opacity 1.5s ease-in;
         
         & > img {
             display: block;
@@ -101,6 +96,10 @@
             transition: all .2s ease-in;
         }
     }
+}
+
+.is-visible{
+    opacity: 1;
 }
 
 
