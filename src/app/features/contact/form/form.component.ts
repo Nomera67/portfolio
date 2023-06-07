@@ -46,8 +46,7 @@ export class FormComponent implements OnInit, AfterViewInit {
 
     emailjs.send('service_trvdq6k', 'template_qlk5l6c', formParams, 'Nbhs3BIADrtWphID2')
       .then((result) => {
-        console.log(result.text);
-        alert('Votre message a été envoyé avec succès.');
+        console.log(result.text)
         form.reset();
       }, (error) => {
         console.log(error.text);
