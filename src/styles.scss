@@ -25,6 +25,7 @@ $nav-size: 1rem;
 $header-size: 3.5rem;
 $logo-size: 1.5rem;
 $hover-color: #15EAD5;
+$main-background: #020202;
 $nav-toggle-color: rgba(52, 58, 64, .5);
 $heroe-title-size: clamp(2rem, 5vw, 4rem);
 $welcome-size: clamp(1rem, 3vw, 2rem);
@@ -36,10 +37,9 @@ $introduction-subtitle-size: clamp(1rem, 3vw, 1.5rem);
 $nav-appearence: 1.2s;
 $heroe-appearence: 1s;
 
-
 //Common style
 body{
-    background-color: black;
+    background-color: $main-background;
     color: white;
     font-family: Poppins;
 }
@@ -61,11 +61,11 @@ body{
 //Projects section appear animation
 @keyframes projectsAppear {
     from{
-        transform: translateY(50%);
+        transform: translateY(-50%);
         opacity: 0;
     }
     100% {
-        transform: translateY(0);
+        transform: translateY(-0);
         opacity: 1;
     }
 }
@@ -82,93 +82,17 @@ body{
     }
 }
 
-//Background movement for projects section's background
-@keyframes movingBackground {
+//appearance of projects 
+
+@keyframes fadeIn {
     from{
-        background-position: 36% 42%;
-        background-size: 200%;
+        opacity: 0;
     }
-    20%{
-        background-position: 30% 35%;
-        background-size: 200%;
-    }
-    20.0001%{
-        background-position: 60% 85%;
-        background-size: 500%;
-    }
-    40%{
-        background-position: 80% 42%;
-        background-size: 500%;
-    }
-    40.0001%{
-        background-position: 80% 42%;
-        background-size: 300%;
-    }
-    60%{
-        background-position: 0% 0%;
-        background-size: 300%;
-    }
-    60.0001%{
-        background-position: 100% 100%;
-        background-size: 250%;
-    }
-    80%{
-        background-position: 81% 93%;
-        background-size: 250%;
-    }
-    80.0001%{
-        background-position: 20% 25%;
-        background-size: 350%;
-    }
-    100%{
-        background-position: 45% 43%;
-        background-size: 350%;
-    }   
+    to{
+        opacity: 1;
+    }    
 }
 
-@keyframes movingBackgroundReverse {
-    100%{
-        background-position: 36% 42%;
-        background-size: 200%;
-    }
-    80.0001%{
-        background-position: 30% 35%;
-        background-size: 200%;
-    }
-    80%{
-        background-position: 60% 85%;
-        background-size: 500%;
-    }
-    60.0001%{
-        background-position: 80% 42%;
-        background-size: 500%;
-    }
-    60%{
-        background-position: 80% 42%;
-        background-size: 300%;
-    }
-    40.0001%{
-        background-position: 0% 0%;
-        background-size: 300%;
-    }
-    40%{
-        background-position: 100% 100%;
-        background-size: 250%;
-    }
-    20.0001%{
-        background-position: 81% 93%;
-        background-size: 250%;
-    }
-    20%{
-        background-position: 20% 25%;
-        background-size: 350%;
-    }
-    0%{
-        background-position: 45% 43%;
-        background-size: 350%;
-    }
-    
-}
 
 //Introduction section keyframes
 //Profil picture appearence

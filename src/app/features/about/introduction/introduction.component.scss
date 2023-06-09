@@ -16,7 +16,7 @@
         text-align: left;
         &>h1{
             font-size: $introduction-title-size;
-            animation: 2s linear backwards 1s titleAppear;
+            animation: 1s linear backwards titleAppear;
             &>span{
                 color: $hover-color;
                 display: inline-block;
@@ -24,7 +24,7 @@
         }
         &>p{
             font-size: $introduction-subtitle-size;
-            animation: 2s linear backwards 1s subtitleAppear;
+            animation: 1s linear backwards subtitleAppear;
             &>span{
                 color: $hover-color;
                 display: inline-block;
@@ -41,7 +41,7 @@
         background-image: url('../../../../assets/profil-picture/author.png');
         position: relative;
         overflow: hidden;
-        animation: 2s linear backwards 1s introductionAppear;
+        animation: 1.5s linear backwards introductionAppear;
     }
 }
 

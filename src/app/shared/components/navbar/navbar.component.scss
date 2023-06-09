@@ -25,8 +25,7 @@ header{
     width: 100%;
     height: $header-size;
     z-index: 5;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(.5rem);
+    backdrop-filter: blur(1rem);
 }
 .logo{
     font-family: Yellowtail;

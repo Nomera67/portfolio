@@ -1,0 +1,17 @@
+<div ngClass="card__container">
+    <h1 ngClass="card__title">{{projet.name}}</h1>
+    <div ngClass="card__project">
+        <img src="{{projet.picture}}" alt="Homepage du projet {{projet.name}}">
+        <div ngClass="card__text">
+            <p>{{projet.description}}</p>
+            <div class="card__technologies">
+                <p>Langages:</p>
+                <p>{{projet.technologies}}</p>
+            </div>
+            <div class="card__links">
+                <a href={{projet.github}} target="_blank" ngClass="card__github"><img src="../../../../../assets/icons/Git-icon-white.svg.png" alt=""></a>
+                <a href="{{projet.directory}}" target="_blank" ngClass="card__to">Visiter</a>
+            </div>
+        </div>
+    </div>
+</div>

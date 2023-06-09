@@ -19,6 +19,7 @@ const routes: Routes = [
   {
     path: 'contact', component: ContactComponent
   },
+  { path: 'project/:id', loadChildren: () => import('../features/homepage/projects/project-card/project-card.module').then(m => m.ProjectCardModule) },
   {
     path: '**', component: NotFoundComponent
   }

@@ -81,7 +81,7 @@
         position: absolute;
         bottom: 5px;
         left: 60px;
-        color: rgb(160, 160, 160);
+        color: $hover-color;
         display: inline-block;
         &:hover{
             color: $hover-color;
@@ -93,10 +93,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        background-size: cover;
-        background-position: center;
         position: relative;
-        background-image: url(../../../../assets/backgrounds/markus-laanisto-rNpjf2V-LDM-unsplash.jpg);
         animation: 2s backwards linear 1 contactAppear;
     }
     &__container{
@@ -143,21 +140,9 @@
     &__item{
         &:hover{
             & input::placeholder{
-                color: white;
+                color: $hover-color;
             }
-            &, .form__grid1{
-                border-bottom: 1px solid $hover-color;
-            }
-            &, .form__grid2{
-                border-bottom: 1px solid $hover-color;
-            }
-            &, .form__grid3{
-                border-bottom: 1px solid $hover-color;
-            }
-            &, .form__grid4{
-                border-bottom: 1px solid $hover-color;
-            }
-            &, .form__grid5{
+            &, .form__grid1, .form__grid2, .form__grid3, .form__grid4, .form__grid5, .form__grid6{
                 border-bottom: 1px solid $hover-color;
             }
         }
@@ -201,7 +186,7 @@
                 border-bottom: 1px solid $hover-color;
             }
             & input::placeholder{
-                color: white;
+                color: $hover-color;
             }
         }
     }
@@ -288,26 +273,6 @@ input{
     &.ng-dirty.ng-invalid{
         background-color: rgba(21, 234, 213, .3);
     }
-}
-
-
-.acknowledgments{
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-    padding: 5px 10px;
-    text-decoration: none;
-    font-size: 0.8rem;
-    background: transparent;
-    color: $hover-color;
-    border: 1px solid $hover-color;
-    border-radius: 10px;
-    cursor: pointer;
-    transition:all .3s ease-in-out;
-        &:hover{
-            background: $hover-color;
-            color: white;
-        }
 }
 
 @media (max-width: 500px) {

@@ -3,12 +3,13 @@
 
 .projects{
     &__component{
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
-        width: fit-content;
-        margin: auto;
-        gap: 50px;
-        padding-bottom: 50px;
+        align-items: center;
+        max-width: 1100px;      
+        gap: 70px;
+        padding: 0 2vmin;
     }
     &__title{
         display: flex;
@@ -17,7 +18,7 @@
         align-items: center;
         font-size: clamp(1.5rem, 3vw, 2rem);
         font-family: Yellowtail;
-        animation: $heroe-appearence ease-in-out 2.5s 1 projectsAppear;
+        animation: $heroe-appearence 1s ease-in-out projectsAppear;
         animation-fill-mode: backwards;
         &>h2{
             &>span{
@@ -27,106 +28,89 @@
     }
     &__container{
         display: flex;
-        flex-direction: column;
-        gap: 80px;
+        flex-wrap: wrap;
+        gap: 3vmin;
+        gap: 30px;
+        
     }
     &__item{
-        display: flex;
-        flex-direction: row;
-        gap: 40px;
-        max-width: 900px;
-        height: 330px;
+        cursor: pointer;
+        position: relative;
+        width: 350px;
+        height: 250px;
+        flex-grow: 1;
         border-radius: 20px;
-        padding: 40px 80px;
-        background-color: rgb(2, 2, 2);
-        animation: $heroe-appearence ease-in-out 3s 1 projectsAppear;
-        animation-fill-mode: backwards;
-        transition: .5s linear all;
+        overflow: hidden;
+        opacity: 0;
+        transition: opacity 1.5s ease-in;
+        
+        & > img {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: grayscale(1);
+            transition: all .2s ease-in;
+        }
         &:hover{
-            transform: scale(1.05);
-        }
-        &:nth-child(even){
-            & .projects__picture{
-                animation: 20s linear infinite movingBackground;
+            & > img{
+                filter: grayscale(0);
             }
-        }
-        &:nth-child(odd){
-            & .projects__picture{
-                animation: 20s linear infinite movingBackgroundReverse;
+            & .projects__description{
+                &::before{
+                    background: rgba(0, 0, 0, 0);
+                }
+                & > h3 {
+                    opacity: 0;
+                }
             }
+            
         }
     }
     &__description{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        flex: 1;
-        animation: $heroe-appearence ease-in-out 4s 1 projectsAppear;
-        animation-fill-mode: backwards;
-        &>p{
-            &>span{
-                color: $hover-color;
-            }
-        }
-    }
-    &__picture{
-        flex: 1;
-        background-size: 300%;
-    }
-
-    &__links{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        animation: $heroe-appearence ease-in-out 4.5s 1 projectsAppear;
-        animation-fill-mode: backwards;
-        &__directTo{
-            text-decoration: none;
-            color: white;
-            cursor: pointer;
-            border: 1px solid $hover-color;
-            padding: 10px 20px;
-            border-radius: 20px;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+        z-index: 1;
+        & > h3 {
             color: $hover-color;
-            transition: all .2s ease-in-out;
-            &:hover{
-                color: white;
-                background-color: $hover-color;
-            }
+            font-size: clamp(2rem, 3vw, 2.5rem);
+            font-family: Yellowtail;
+            opacity: 1;
+            transition: all .2s ease-in;
         }
-        &>a{
-            &>img{
-                width: 32px;
-            }
-        }
-    }
-}
-
-@media (max-width: 900px){
-    .projects{
-        &__description{
-            gap: 10px;
-        }
-        &__item{
-            &:hover{
-                transform: scale(1);
-            }
-        }
-        &__links{
-            margin-top: 20px;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 110%;
+            height: 110%;
+            z-index: -1;
+            background: rgba(0, 0, 0, .7);
+            transition: all .2s ease-in;
         }
     }
 }
 
-@media (max-width: 800px) {
+.is-visible{
+    opacity: 1;
+}
+
+
+
+@media (width < 700px) {
     .projects{
-        &__description{
-            grid-auto-flow: 20px;
+        &__component{
+            padding: 0;
         }
         &__item{
-            flex-direction: column;
-            padding: 10px 20px;
+            border-radius: 0;
         }
-    }    
+    }
 }
