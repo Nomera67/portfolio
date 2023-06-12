@@ -1,0 +1,44 @@
+@use '../../../../../styles.scss' as *;
+
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 66px;
+	height: 33px;
+	background: grey;
+	display: block;
+	border-radius: 100px;
+	position: relative;
+    transition: all .3s ease;
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	width: 26px;
+	height: 26px;
+	background: #fff;
+	border-radius: 90px;
+	transition: all .3s ease;
+}
+
+input:checked + label {
+	background: $hover-color
+}
+
+input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+label:active:after {
+	width: 10px;
+}

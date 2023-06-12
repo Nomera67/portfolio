@@ -17,6 +17,7 @@ import { SkillsComponent } from './features/about/skills/skills.component';
 import { FormComponent } from './features/contact/form/form.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ToggleModeComponent } from './shared/components/navbar/toggle-mode/toggle-mode.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { HttpClientModule } from '@angular/common/http';
     IntroductionComponent,
     ResumeComponent,
     SkillsComponent,
-    FormComponent
+    FormComponent,
+    ToggleModeComponent
   ],
   imports: [
     BrowserModule,

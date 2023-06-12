@@ -36,6 +36,18 @@ header{
     overflow: visible;
 }
 
+.navBar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.toggle__mode{
+    margin-bottom: 15px;
+    animation: navAppear 2s ease;
+}
+
 .logo, .nav__item{
     animation-name: navAppear;
     animation-duration: $nav-appearence;
@@ -80,6 +92,18 @@ header{
 //Media queries
 
 @media screen and (max-width: 1200px) {
+
+    .navBar{
+        display: inherit;
+        position: relative;
+    }
+
+    .toggle__mode{
+        position: absolute;
+        top: -40px;
+        right: 5rem;
+    }
+
     header{
         height: 5rem;
         justify-content: space-between;
