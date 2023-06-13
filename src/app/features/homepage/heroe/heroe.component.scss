@@ -1,6 +1,12 @@
 @use '../../../../styles.scss' as *;
 
+.heroe.light{
+    background-color: red;
+}
 
+.heroe.dark{
+    background-color: black;
+}
 
 .heroe{
     height: 80vh;

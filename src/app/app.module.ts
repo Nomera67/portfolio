@@ -18,6 +18,7 @@ import { FormComponent } from './features/contact/form/form.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ToggleModeComponent } from './shared/components/navbar/toggle-mode/toggle-mode.component';
+import { ThemeServiceService } from './services/switch-mode/theme-service.service';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,9 @@ import { ToggleModeComponent } from './shared/components/navbar/toggle-mode/togg
   exports: [
     ClipboardModule
   ],
-  providers: [],
+  providers: [
+    ThemeServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

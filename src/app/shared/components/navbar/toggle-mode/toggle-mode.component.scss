@@ -1,5 +1,11 @@
 @use '../../../../../styles.scss' as *;
 
+.toggle__container{
+	width: fit-content;
+	display: grid;
+	align-items: center;
+}
+
 input[type=checkbox]{
 	height: 0;
 	width: 0;
@@ -31,7 +37,7 @@ label:after {
 }
 
 input:checked + label {
-	background: $hover-color
+	background: $hover-color;
 }
 
 input:checked + label:after {

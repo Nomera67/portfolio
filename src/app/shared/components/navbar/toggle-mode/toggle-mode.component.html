@@ -1,1 +1,3 @@
-<input type="checkbox" id="switch" /><label for="switch">Toggle dark mode</label>
+<div ngClass="toggle__container">
+    <input type="checkbox" id="switch" [(ngModel)]="isLightMode" (click)="updateLightMode()" /><label for="switch">Toggle dark mode</label>
+</div>
