@@ -17,7 +17,7 @@ label {
 	text-indent: -9999px;
 	width: 66px;
 	height: 33px;
-	background: grey;
+	background: $hover-color;
 	display: block;
 	border-radius: 100px;
 	position: relative;
@@ -37,7 +37,7 @@ label:after {
 }
 
 input:checked + label {
-	background: $hover-color;
+	background: gray;
 }
 
 input:checked + label:after {

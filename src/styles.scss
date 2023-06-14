@@ -32,16 +32,28 @@ $welcome-size: clamp(1rem, 3vw, 2rem);
 $introduction-title-size: clamp(1.5rem, 5vw, 3rem);
 $introduction-subtitle-size: clamp(1rem, 3vw, 1.5rem);
 
+//light-mode variables
+
+$main-background-light: #fefae0;
+
 //duration variables
 
 $nav-appearence: 1.2s;
 $heroe-appearence: 1s;
 
 //Common style
-body{
+body.dark{
     background-color: $main-background;
     color: white;
     font-family: Poppins;
+    transition: all .3s ease;
+}
+
+body.light{
+    background-color: $main-background-light;
+    color: black;
+    font-family: Poppins;
+    transition: all .3s ease;
 }
 
 //Scrollbar style

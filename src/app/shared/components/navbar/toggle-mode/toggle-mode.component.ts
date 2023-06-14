@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ThemeServiceService } from 'src/app/services/switch-mode/theme-service.service';
+import { ThemeService } from 'src/app/services/switch-mode/theme.service';
 
 @Component({
   selector: 'app-toggle-mode',
@@ -8,14 +8,16 @@ import { ThemeServiceService } from 'src/app/services/switch-mode/theme-service.
 })
 export class ToggleModeComponent implements OnInit{
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    
+  }
 
-  isLightMode = false;
+  isSwitchMode = true;
 
-  constructor(private themeService: ThemeServiceService) {}
+  constructor(private themeService: ThemeService) {}
 
-  updateLightMode(): void {
-    this.themeService.setLightModeValue(this.isLightMode);
+  updateSwitchMode(): void {
+    this.themeService.setSwitchModeValue(this.isSwitchMode);
   }
 
 }

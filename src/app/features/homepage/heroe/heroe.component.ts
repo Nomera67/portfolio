@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ThemeServiceService } from 'src/app/services/switch-mode/theme-service.service';
+import { ThemeService } from 'src/app/services/switch-mode/theme.service';
 
 @Component({
   selector: 'app-heroe',
@@ -7,13 +7,13 @@ import { ThemeServiceService } from 'src/app/services/switch-mode/theme-service.
   styleUrls: ['./heroe.component.scss']
 })
 export class HeroeComponent implements OnInit {
-  isLightMode?: boolean;
+  isSwitchMode: boolean = true;
 
-  constructor(public themeService: ThemeServiceService) {}
+  constructor(public themeService: ThemeService) {}
 
   ngOnInit(): void {
-    this.themeService.getIsLightMode().subscribe((isLightMode: boolean) => {
-      this.isLightMode = isLightMode;
+    this.themeService.getIsSwitchMode().subscribe((isSwitchMode: boolean) => {
+      this.isSwitchMode = isSwitchMode;
     });
   }
 
