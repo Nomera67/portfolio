@@ -1,9 +1,5 @@
 @use '../../../../styles.scss' as *;
 
-.heroe.dark{
-    background-color: black;
-}
-
 .heroe{
     height: 80vh;
     margin:  $header-size auto 0 auto;
@@ -43,7 +39,7 @@
             height: 190px;
             font-size: clamp(0.8rem, 2vw, 1rem);
             &>address{
-                transition: all .4s ease-in-out;
+                transition: all .3s ease-in-out;
                 animation: $heroe-appearence ease-in-out 1s 1 heroeAppear;
                 animation-fill-mode: backwards;
                 &:hover{

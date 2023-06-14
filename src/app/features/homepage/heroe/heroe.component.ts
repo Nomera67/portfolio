@@ -7,14 +7,14 @@ import { ThemeService } from 'src/app/services/switch-mode/theme.service';
   styleUrls: ['./heroe.component.scss']
 })
 export class HeroeComponent implements OnInit {
-  isSwitchMode: boolean = true;
+  // isSwitchMode: boolean = true;
 
   constructor(public themeService: ThemeService) {}
 
   ngOnInit(): void {
-    this.themeService.getIsSwitchMode().subscribe((isSwitchMode: boolean) => {
-      this.isSwitchMode = isSwitchMode;
-    });
+    // this.themeService.getIsSwitchMode().subscribe((isSwitchMode: boolean) => {
+    //   this.isSwitchMode = isSwitchMode;
+    // });
   }
 
 

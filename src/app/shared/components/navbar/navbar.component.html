@@ -1,6 +1,6 @@
-<header>
+<header [class.light]="isSwitchMode">
     <div>
-        <span ngClass="logo" (click)="homecoming()">YR</span>
+        <span ngClass="logo" (click)="homecoming()" id="logo">YR</span>
     </div>
     <button id="toggleButton" (click)="toggleNav()" ngClass="mobileNavToggle" aria-controls="primary-navigation" aria-expanded="false" data-visible="false">
         <span class="toggle__line"></span>
