@@ -10,13 +10,13 @@
     <nav ngClass="navBar" id="navBar">
         <app-toggle-mode ngClass="toggle__mode" id="toggleMode"></app-toggle-mode>
         <ul id="primary-navigation" data-visible="false" ngClass="nav__list" (mouseenter)="backgroundMove()">
-            <li ngClass="nav__item" >
+            <li ngClass="nav__item" [class.light]="isSwitchMode">
                 <a routerLink="/home" routerLinkActive="active" ngClass="nav__link">Accueil</a>             
             </li>
-            <li ngClass="nav__item" routerLinkActive="active">
+            <li ngClass="nav__item" routerLinkActive="active" [class.light]="isSwitchMode">
                 <a routerLink="/about" ngClass="nav__link">À-propos</a> 
             </li>
-            <li ngClass="nav__item" routerLinkActive="active">
+            <li ngClass="nav__item" routerLinkActive="active" [class.light]="isSwitchMode">
                 <a routerLink="/contact" ngClass="nav__link">Contact</a> 
             </li>
             <div ngClass="nav__list__points"></div>

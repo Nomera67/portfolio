@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProjectsListService } from 'src/app/services/projects-list.service';
 import { ProjectsItems } from 'src/app/models/projects-items';
+import { ThemeService } from 'src/app/services/switch-mode/theme.service';
 
 @Component({
   selector: 'app-projects',
@@ -11,12 +12,20 @@ import { ProjectsItems } from 'src/app/models/projects-items';
 export class ProjectsComponent implements OnInit{
 
 
-  constructor(public _router: Router, private projetListService: ProjectsListService) {}
+  constructor(public _router: Router, private projetListService: ProjectsListService, public themeService: ThemeService) {}
 
   projetList: ProjectsItems[] = [];
+  isSwitchMode: boolean = false;
 
   ngOnInit(): void {
     this.projetList = this.projetListService.projetList    
+
+    const themeSubscription = this.themeService.getIsSwitchMode().subscribe((isSwitchMode: boolean) => {
+      this.isSwitchMode = isSwitchMode;
+    });
+    window.addEventListener('beforeunload', () => {
+      themeSubscription.unsubscribe();
+    })
   }
 
   ngAfterViewInit() {

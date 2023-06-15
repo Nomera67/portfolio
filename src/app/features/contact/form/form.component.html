@@ -3,8 +3,8 @@
         <h1 ngClass="form__title">
             <span>Let's</span>
             <span>get</span> 
-            <span>in</span>
-            <span>touch</span>
+            <span [class.light]="isSwitchMode" ngClass="form__title__spans">in</span>
+            <span [class.light]="isSwitchMode" ngClass="form__title__spans">touch</span>
         </h1>
         <form #contactForm="ngForm" ngClass="form" (ngSubmit)="contactSubmit(contactForm)">
             <div ngClass="form__item form__grid1">

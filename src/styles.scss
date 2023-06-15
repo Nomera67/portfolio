@@ -37,6 +37,7 @@ $introduction-subtitle-size: clamp(1rem, 3vw, 1.5rem);
 $main-background-light: linear-gradient(153deg, rgba(240,227,27,1) 0%, rgba(226,76,22,1) 100%);;
 $text-color-light: #050505;
 $lighter-text-color: #9b9b9b;
+$hover-color-light: #793EFA;
 
 
 //duration variables
@@ -53,7 +54,7 @@ body.dark{
 }
 
 body.light{
-    background: rgb(240,227,27);
+    background: #f0e31b;
     background-color: $main-background-light;
     color: black;
     font-family: Poppins;

@@ -1,6 +1,12 @@
 @use '../../../../styles.scss' as *;
 
+span.light{
+    color: $hover-color-light;
+}
 
+.resume__bar.light{
+    background-color: $hover-color-light;
+}
 
 .resume{
     display: flex;

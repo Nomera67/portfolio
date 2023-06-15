@@ -82,7 +82,7 @@ header{
 }
 
 .active{
-    border-bottom: 1px solid #15EAD5;
+    border-bottom: 1px solid $hover-color;
 }
 
 .mobileNavToggle{
@@ -91,21 +91,20 @@ header{
 
 //light-mode
 
-header.light{
-    & > nav {
-        & > .nav__list {
-            & > .nav__item{
-                & > .nav__link{
-                    color: $text-color-light;
-                    &:hover{
-                        color: $hover-color;
-                    }
-                }
-            }
+.nav__item.light{
+    & > a {
+        color: $text-color-light;
+        &:hover{
+            color: $hover-color-light;
         }
     }
+    &.active {
+        border-bottom: 1px solid $hover-color-light;
+    }
+    & .active{
+        border-bottom: 1px solid $hover-color-light;
+    }
 }
-
 //Media queries
 
 @media screen and (max-width: 1200px) {

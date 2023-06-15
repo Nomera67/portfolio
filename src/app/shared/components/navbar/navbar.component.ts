@@ -14,7 +14,7 @@ export class NavbarComponent implements OnInit {
   constructor(private _router: Router, public themeService: ThemeService){}
 
   ngOnInit(): void {
-     const themeSubscription = this.themeService.getIsSwitchMode().subscribe((isSwitchMode: boolean) => {
+    const themeSubscription = this.themeService.getIsSwitchMode().subscribe((isSwitchMode: boolean) => {
       this.isSwitchMode = isSwitchMode;
     });
     window.addEventListener('beforeunload', () => {

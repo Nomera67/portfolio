@@ -1,5 +1,22 @@
 @use '../../../../styles.scss' as *;
 
+//light-mode
+.introduction__title.light{
+    & > h1{
+        & > span{
+            color: $hover-color-light;
+        }
+    }
+    & > p {
+        & > span {
+            color: $hover-color-light;
+        }
+    }
+}
+
+
+//dark-mode
+
 .introduction{
     &__main{
         display: flex;

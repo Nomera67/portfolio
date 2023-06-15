@@ -75,6 +75,52 @@
     } 
 }
 
+//light-mode
+
+.form__page.light{
+    & > .form__container{
+        & :last-child{
+            color: $hover-color-light;
+        }
+        & > .form__title {
+            & :nth-child(1) & :nth-child(2){
+                color: $text-color-light;
+            }
+            & :nth-child(3){
+                color: $hover-color-light;
+            }
+            & :nth-child(4){
+                color: $hover-color-light;
+            }
+        }
+        & > form {
+            & > .form__grid1, .form__grid2, .form__grid3, .form__grid4, .form__grid5{
+                border-bottom: $lighter-text-color 1px solid;
+                &:hover{
+                    border-bottom: $hover-color-light 1px solid;
+                }
+            }
+            & > .form__buttons {
+                & > .form__buttons__cancel{
+                    background-color: rgb(128, 128, 128);
+                    border: 1px solid $lighter-text-color;
+                    &:hover, .form__buttons__cancel:focus{
+                        box-shadow: inset 0 -4em 0 0 $lighter-text-color;
+                        color: $hover-color-light;
+                        border: 1px solid $hover-color-light;
+                        transform: translateY(-5%);
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+//dark-mode
+
+
+
 .form{
     position: relative;
     &__need{
@@ -272,38 +318,6 @@ input{
     }
 }
 
-//light-mode
-
-.form__page.light{
-    & > .form__container{
-        & > .form__title {
-            & :nth-child(1) & :nth-child(2){
-                color: $text-color-light;
-            }
-        }
-        & > form {
-            & > .form__grid1, .form__grid2, .form__grid3, .form__grid4, .form__grid5{
-                border-bottom: $lighter-text-color 1px solid;
-                &:hover{
-                    border-bottom: $hover-color 1px solid;
-                }
-            }
-            & > .form__buttons {
-                & > .form__buttons__cancel{
-                    background-color: rgb(128, 128, 128);
-                    border: 1px solid $lighter-text-color;
-                    &:hover, .form__buttons__cancel:focus{
-                        box-shadow: inset 0 -4em 0 0 $lighter-text-color;
-                        color: $hover-color;
-                        border: 1px solid $hover-color;
-                        transform: translateY(-5%);
-                    }
-                }
-            }
-        }
-        
-    }
-}
 
 @media (max-width: 500px) {
 

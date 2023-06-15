@@ -1,5 +1,22 @@
 @use '../../../../styles.scss' as *;
 
+
+.spanColor.light{
+    color: $hover-color-light;
+}
+
+.heroe__contact__container.light{
+    > button {
+        border: 1px solid $hover-color-light;
+        background: transparent;
+        color: $hover-color-light;
+        &:hover{
+            background: $hover-color-light;
+            color: white;
+        }
+    }
+}
+
 .heroe{
     height: 80vh;
     margin:  $header-size auto 0 auto;
