@@ -109,24 +109,51 @@ header{
 
 @media screen and (max-width: 1200px) {
 
-    header.light{
-        & > .mobileNavToggle{
-            > span {
-                background-color: $text-color-light;
-            }
+    .toggle__line.light{
+        background: $text-color-light;
+    }
+
+    .mobileNavToggle[aria-expanded="true"].light{
+        transform: rotate(45deg);
+        transition: all 0.3s ease-in-out;
+        transition-delay: 0.6s;
+        & .toggle__line:nth-child(2){
+            width: 0px;
         }
-        & > nav {
-            & > .nav__list {
-                & > .nav__item{
-                    & > .nav__link{
-                        color: white;
-                        &:hover{
-                            color: $hover-color;
-                        }
-                    }
-                }
-            }
+        & .toggle__line:nth-child(1), & .line:nth-child(3){
+            -webkit-transition-delay: 0.3s;
+            -o-transition-delay: 0.3s;
+            transition-delay: 0.3s;
         }
+        & .toggle__line:nth-child(1){
+            -webkit-transform: translateY(4px);
+            -ms-transform: translateY(4px);
+            -o-transform: translateY(4px);
+            transform: translateY(4px);
+            background-color: white;
+        }
+        & .toggle__line:nth-child(3){
+            -webkit-transform: translateY(-12px) rotate(90deg);
+            -ms-transform: translateY(-12px) rotate(90deg);
+            -o-transform: translateY(-12px) rotate(90deg);
+            transform: translateY(-12px) rotate(90deg);
+            background-color: white;
+        }
+    }
+
+    .nav__link.light{
+        color: white;
+    }
+
+    .nav__list.light:hover > .nav__item:hover > .nav__link:hover{
+        opacity: 1;
+        color: $hover-color-light;
+    }
+
+    .nav__list__background.light{
+        background: url('../../../../assets/backgrounds/frame-harirak-ygqEStV56u0-unsplash-light.jpg');
+        background-position: center 30%;
+        background-size: 110vmax;
     }
 
 
@@ -290,34 +317,6 @@ header{
             -ms-transform: translateY(-12px) rotate(90deg);
             -o-transform: translateY(-12px) rotate(90deg);
             transform: translateY(-12px) rotate(90deg);
-        }
-    }
-
-    .mobileNavToggle[aria-expanded="true"].light{
-        transform: rotate(45deg);
-        transition: all 0.3s ease-in-out;
-        transition-delay: 0.6s;
-        & .toggle__line:nth-child(2){
-            width: 0px;
-        }
-        & .toggle__line:nth-child(1), & .line:nth-child(3){
-            -webkit-transition-delay: 0.3s;
-            -o-transition-delay: 0.3s;
-            transition-delay: 0.3s;
-        }
-        & .toggle__line:nth-child(1){
-            -webkit-transform: translateY(4px);
-            -ms-transform: translateY(4px);
-            -o-transform: translateY(4px);
-            transform: translateY(4px);
-            background-color: white;
-        }
-        & .toggle__line:nth-child(3){
-            -webkit-transform: translateY(-12px) rotate(90deg);
-            -ms-transform: translateY(-12px) rotate(90deg);
-            -o-transform: translateY(-12px) rotate(90deg);
-            transform: translateY(-12px) rotate(90deg);
-            background-color: white;
         }
     }
 

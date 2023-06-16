@@ -17,7 +17,10 @@ label {
 	text-indent: -9999px;
 	width: 66px;
 	height: 33px;
-	background: $hover-color-light;
+	background-image: url('../../../../../assets/toggle-icons/cloudy-day.png');
+	background-position: 70% 70%;
+	background-size: cover;
+	background-repeat: no-repeat;
 	display: block;
 	border-radius: 100px;
 	position: relative;
@@ -31,13 +34,18 @@ label:after {
 	left: 4px;
 	width: 26px;
 	height: 26px;
-	background: #fff;
+	background: $main-background-light;
 	border-radius: 90px;
 	transition: all .3s ease;
 }
 
 input:checked + label {
-	background: $hover-color;
+	background-image: url('../../../../../assets/toggle-icons/moon.png');
+	background-position: center;
+	background-size: cover;
+	&:after{
+		background: #fff;
+	}
 }
 
 input:checked + label:after {

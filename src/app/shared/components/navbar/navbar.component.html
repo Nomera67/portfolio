@@ -2,25 +2,25 @@
     <div>
         <span ngClass="logo" (click)="homecoming()" id="logo">YR</span>
     </div>
-    <button id="toggleButton" (click)="toggleNav()" ngClass="mobileNavToggle" aria-controls="primary-navigation" aria-expanded="false" data-visible="false">
-        <span class="toggle__line"></span>
-        <span class="toggle__line"></span>
-        <span class="toggle__line"></span>
+    <button id="toggleButton" (click)="toggleNav()" ngClass="mobileNavToggle" aria-controls="primary-navigation" aria-expanded="false" data-visible="false" [class.light]="isSwitchMode">
+        <span class="toggle__line" [class.light]="isSwitchMode"></span>
+        <span class="toggle__line" [class.light]="isSwitchMode"></span>
+        <span class="toggle__line" [class.light]="isSwitchMode"></span>
     </button>
     <nav ngClass="navBar" id="navBar">
         <app-toggle-mode ngClass="toggle__mode" id="toggleMode"></app-toggle-mode>
-        <ul id="primary-navigation" data-visible="false" ngClass="nav__list" (mouseenter)="backgroundMove()">
+        <ul id="primary-navigation" data-visible="false" ngClass="nav__list" (mouseenter)="backgroundMove()" [class.light]="isSwitchMode">
             <li ngClass="nav__item" [class.light]="isSwitchMode">
-                <a routerLink="/home" routerLinkActive="active" ngClass="nav__link">Accueil</a>             
+                <a routerLink="/home" routerLinkActive="active" ngClass="nav__link" [class.light]="isSwitchMode">Accueil</a>             
             </li>
             <li ngClass="nav__item" routerLinkActive="active" [class.light]="isSwitchMode">
-                <a routerLink="/about" ngClass="nav__link">À-propos</a> 
+                <a routerLink="/about" ngClass="nav__link" [class.light]="isSwitchMode">À-propos</a> 
             </li>
             <li ngClass="nav__item" routerLinkActive="active" [class.light]="isSwitchMode">
-                <a routerLink="/contact" ngClass="nav__link">Contact</a> 
+                <a routerLink="/contact" ngClass="nav__link" [class.light]="isSwitchMode">Contact</a> 
             </li>
-            <div ngClass="nav__list__points"></div>
-            <div ngClass="nav__list__background" id="background__menu"></div>
+            <div ngClass="nav__list__points" [class.light]="isSwitchMode"></div>
+            <div ngClass="nav__list__background" id="background__menu" [class.light]="isSwitchMode"></div>
         </ul>
     </nav>
 </header>
