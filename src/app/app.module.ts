@@ -17,6 +17,8 @@ import { SkillsComponent } from './features/about/skills/skills.component';
 import { FormComponent } from './features/contact/form/form.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ToggleModeComponent } from './shared/components/navbar/toggle-mode/toggle-mode.component';
+import { ThemeService } from './services/switch-mode/theme.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { HttpClientModule } from '@angular/common/http';
     IntroductionComponent,
     ResumeComponent,
     SkillsComponent,
-    FormComponent
+    FormComponent,
+    ToggleModeComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,9 @@ import { HttpClientModule } from '@angular/common/http';
   exports: [
     ClipboardModule
   ],
-  providers: [],
+  providers: [
+    ThemeService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

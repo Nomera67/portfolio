@@ -25,6 +25,13 @@
                 color: $hover-color;
             }
         }
+        &.light{
+            & > h2{
+                &>span{
+                    color: $hover-color-light;
+                }
+            }
+        }
     }
     &__container{
         display: flex;
@@ -94,6 +101,11 @@
             z-index: -1;
             background: rgba(0, 0, 0, .7);
             transition: all .2s ease-in;
+        }
+        &.light{
+            & > h3 {
+                color: $hover-color-light;
+            }
         }
     }
 }

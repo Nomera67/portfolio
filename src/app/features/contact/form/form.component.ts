@@ -1,6 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { NgForm, FormControl, Validators } from '@angular/forms';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
+import { ThemeService } from 'src/app/services/switch-mode/theme.service';
 
 @Component({
   selector: 'app-form',
@@ -15,15 +16,22 @@ export class FormComponent implements OnInit, AfterViewInit {
     Validators.pattern("[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$")
   ]);
 
-  
+  isSwitchMode: boolean = false;
 
-  constructor() {}
+  constructor(public themeService: ThemeService) {}
 
   ngAfterViewInit(): void {
     emailjs.init("Nbhs3BIADrtWphID2");
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const themeSubscription = this.themeService.getIsSwitchMode().subscribe((isSwitchMode: boolean) => {
+      this.isSwitchMode = isSwitchMode;
+    });
+    window.addEventListener('beforeunload', () => {
+      themeSubscription.unsubscribe();
+    })
+  }
 
   contactName: string = '';
   contactSurname: string = '';

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ThemeService } from 'src/app/services/switch-mode/theme.service';
 
 @Component({
   selector: 'app-skills',
@@ -7,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkillsComponent implements OnInit{
 
-  constructor() { }
+  constructor(public themeService: ThemeService) { }
+
+  isSwitchMode: boolean = false;
 
   ngOnInit(): void {
-    
+    const themeSubscription = this.themeService.getIsSwitchMode().subscribe((isSwitchMode: boolean) => {
+      this.isSwitchMode = isSwitchMode;
+    });
+    window.addEventListener('beforeunload', () => {
+      themeSubscription.unsubscribe();
+    })    
   }
 
   ngAfterViewInit() {

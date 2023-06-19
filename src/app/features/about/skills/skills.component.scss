@@ -1,5 +1,13 @@
 @use '../../../../styles.scss' as *;
 
+span.light{
+    color: $hover-color-light;
+}
+
+.skills__bar.light{
+    background-color: $hover-color-light
+}
+
 .skills{
     display: flex;
     flex-direction: row;

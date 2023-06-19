@@ -36,6 +36,18 @@ header{
     overflow: visible;
 }
 
+.navBar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.toggle__mode{
+    margin-top: 10px;
+    animation: navAppear 2s ease;
+}
+
 .logo, .nav__item{
     animation-name: navAppear;
     animation-duration: $nav-appearence;
@@ -70,16 +82,92 @@ header{
 }
 
 .active{
-    border-bottom: 1px solid #15EAD5;
+    border-bottom: 1px solid $hover-color;
 }
 
 .mobileNavToggle{
     display: none;
 }
 
+//light-mode
+
+.nav__item.light{
+    & > a {
+        color: $text-color-light;
+        &:hover{
+            color: $hover-color-light;
+        }
+    }
+    &.active {
+        border-bottom: 1px solid $hover-color-light;
+    }
+    & .active{
+        border-bottom: 1px solid $hover-color-light;
+    }
+}
 //Media queries
 
 @media screen and (max-width: 1200px) {
+
+    .toggle__line.light{
+        background: $text-color-light;
+    }
+
+    .mobileNavToggle[aria-expanded="true"].light{
+        transform: rotate(45deg);
+        transition: all 0.3s ease-in-out;
+        transition-delay: 0.6s;
+        & .toggle__line:nth-child(2){
+            width: 0px;
+        }
+        & .toggle__line:nth-child(1), & .line:nth-child(3){
+            -webkit-transition-delay: 0.3s;
+            -o-transition-delay: 0.3s;
+            transition-delay: 0.3s;
+        }
+        & .toggle__line:nth-child(1){
+            -webkit-transform: translateY(4px);
+            -ms-transform: translateY(4px);
+            -o-transform: translateY(4px);
+            transform: translateY(4px);
+            background-color: white;
+        }
+        & .toggle__line:nth-child(3){
+            -webkit-transform: translateY(-12px) rotate(90deg);
+            -ms-transform: translateY(-12px) rotate(90deg);
+            -o-transform: translateY(-12px) rotate(90deg);
+            transform: translateY(-12px) rotate(90deg);
+            background-color: white;
+        }
+    }
+
+    .nav__link.light{
+        color: white;
+    }
+
+    .nav__list.light:hover > .nav__item:hover > .nav__link:hover{
+        opacity: 1;
+        color: $hover-color-light;
+    }
+
+    .nav__list__background.light{
+        background: url('../../../../assets/backgrounds/frame-harirak-ygqEStV56u0-unsplash-light.jpg');
+        background-position: center 30%;
+        background-size: 110vmax;
+    }
+
+
+    .navBar{
+        display: inherit;
+        position: relative;
+    }
+
+    .toggle__mode{
+        position: absolute;
+        top: -1.50rem;
+        right: 5rem;
+    }
+
     header{
         height: 5rem;
         justify-content: space-between;
@@ -93,6 +181,10 @@ header{
         top: 1.60rem;
         left: 2rem;
         z-index: 3;
+    }
+    .logo.light{
+        color: white;
+        transition: color .25s ease-in-out;
     }
     .nav__list{
         position: fixed;

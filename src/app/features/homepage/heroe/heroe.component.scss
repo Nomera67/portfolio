@@ -1,6 +1,21 @@
 @use '../../../../styles.scss' as *;
 
 
+.spanColor.light{
+    color: $hover-color-light;
+}
+
+.heroe__contact__container.light{
+    > button {
+        border: 1px solid $hover-color-light;
+        background: transparent;
+        color: $hover-color-light;
+        &:hover{
+            background: $hover-color-light;
+            color: white;
+        }
+    }
+}
 
 .heroe{
     height: 80vh;
@@ -41,7 +56,7 @@
             height: 190px;
             font-size: clamp(0.8rem, 2vw, 1rem);
             &>address{
-                transition: all .4s ease-in-out;
+                transition: all .3s ease-in-out;
                 animation: $heroe-appearence ease-in-out 1s 1 heroeAppear;
                 animation-fill-mode: backwards;
                 &:hover{

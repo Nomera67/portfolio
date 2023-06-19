@@ -1,21 +1,21 @@
 <div ngClass="resume">
-    <h2 ngClass="resume__title" id="resumeTitle"><span>Emplois et formations</span></h2>
+    <h2 ngClass="resume__title" id="resumeTitle"><span [class.light]="isSwitchMode">Emplois et formations</span></h2>
     <div ngClass="resume__container">
         <div ngClass="resume__item">
             <h3>
-                <span><time datetime="2022">2022</time></span> ⟶ <span><time datetime="2023">2023</time></span> : auto-apprentissage du <span>développement Front-End</span>
+                <span [class.light]="isSwitchMode"><time datetime="2022">2022</time></span> ⟶ <span [class.light]="isSwitchMode"><time datetime="2023">2023</time></span> : auto-apprentissage du <span [class.light]="isSwitchMode">développement Front-End</span>
             </h3>
             <p>
-                D'abord tourné vers <span>l'apprentissage général</span> du développement web, je me suis tourné peu à peu vers le Front-End du fait de ma <span>volonté de création visuelle</span>
+                D'abord tourné vers <span [class.light]="isSwitchMode">l'apprentissage général</span> du développement web, je me suis tourné peu à peu vers le Front-End du fait de ma <span [class.light]="isSwitchMode">volonté de création visuelle</span>
             </p>
         </div>
-        <div ngClass="resume__bar"></div>
+        <div ngClass="resume__bar" [class.light]="isSwitchMode"></div>
         <div ngClass="resume__item">
             <h3>
-                <span><time datetime="2021">2021</time></span> ⟶ <span><time datetime="2022">2022</time></span> : <span>Voyages</span>
+                <span [class.light]="isSwitchMode"><time datetime="2021">2021</time></span> ⟶ <span [class.light]="isSwitchMode"><time datetime="2022">2022</time></span> : <span [class.light]="isSwitchMode">Voyages</span>
             </h3>
             <p>
-                Une année consacrée uniquement aux voyages et à <span>la découverte d'une partie de l'Europe</span> :
+                Une année consacrée uniquement aux voyages et à <span [class.light]="isSwitchMode">la découverte d'une partie de l'Europe</span> :
             </p>
             <ul>
                 <li>Allemagne</li>
@@ -29,51 +29,51 @@
                 <li>Suisse</li>
             </ul>
         </div>
-        <div ngClass="resume__bar"></div>
+        <div ngClass="resume__bar" [class.light]="isSwitchMode"></div>
         <div ngClass="resume__item">
             <h3>
-                <span><time datetime="2019">2019</time></span> ⟶ <span><time datetime="2021">2021</time></span> : <span>Conseiller clientèle</span>
+                <span [class.light]="isSwitchMode"><time datetime="2019">2019</time></span> ⟶ <span [class.light]="isSwitchMode"><time datetime="2021">2021</time></span> : <span [class.light]="isSwitchMode">Conseiller clientèle</span>
             </h3>
             <p>
                 Un métier qui permet d'acquérir des compétences particulières :
             </p>
             <ul>
-                <li>Le <span>travail sous pression</span></li>
-                <li>Le suivi de <span>procédures</span></li>
-                <li>La rédaction de <span>documentations</span></li>
-                <li>Une <span>capacité d'analyse</span> qui se veut rapide même sur des <span>sujets complexes</span></li>
-                <li>L'entraide et l'importance de <span>l'esprit d'équipe</span></li>
+                <li>Le <span [class.light]="isSwitchMode">travail sous pression</span></li>
+                <li>Le suivi de <span [class.light]="isSwitchMode">procédures</span></li>
+                <li>La rédaction de <span [class.light]="isSwitchMode">documentations</span></li>
+                <li>Une <span [class.light]="isSwitchMode">capacité d'analyse</span> qui se veut rapide même sur des <span [class.light]="isSwitchMode">sujets complexes</span></li>
+                <li>L'entraide et l'importance de <span [class.light]="isSwitchMode">l'esprit d'équipe</span></li>
             </ul>
         </div>
-        <div ngClass="resume__bar"></div>
+        <div ngClass="resume__bar" [class.light]="isSwitchMode"></div>
         <div ngClass="resume__item">
             <h3>
-                <span><time datetime="2017">2017</time></span> ⟶ <span><time datetime="2018">2018</time></span> : <span>Service civique volontaire</span>
+                <span [class.light]="isSwitchMode"><time datetime="2017">2017</time></span> ⟶ <span [class.light]="isSwitchMode"><time datetime="2018">2018</time></span> : <span [class.light]="isSwitchMode">Service civique volontaire</span>
             </h3>
             <p>
-                Une <span>expérience unique</span> dans une mairie qui m'a permis d'utiliser mes <span>compétences</span> dans la <span>préservation du patrimoine</span> et sa promotion en :
+                Une <span [class.light]="isSwitchMode">expérience unique</span> dans une mairie qui m'a permis d'utiliser mes <span [class.light]="isSwitchMode">compétences</span> dans la <span [class.light]="isSwitchMode">préservation du patrimoine</span> et sa promotion en :
             </p>
             <ul>
-                <li><span>Créant des événements</span> pour la vie du village</li>
-                <li>Animant des <span>expositions</span></li>
-                <li>Cherchant des <span>subventions nationales et européennes</span></li>
-                <li>Montant des projets de <span>restauration du patrimoine</span> tout en les voyant se concrétiser</li>
-                <li>Assurant un <span>lien</span> entre le village et une communauté de communes</li>
+                <li><span [class.light]="isSwitchMode">Créant des événements</span> pour la vie du village</li>
+                <li>Animant des <span [class.light]="isSwitchMode">expositions</span></li>
+                <li>Cherchant des <span [class.light]="isSwitchMode">subventions nationales et européennes</span></li>
+                <li>Montant des projets de <span [class.light]="isSwitchMode">restauration du patrimoine</span> tout en les voyant se concrétiser</li>
+                <li>Assurant un <span [class.light]="isSwitchMode">lien</span> entre le village et une communauté de communes</li>
             </ul>
         </div>
-        <div ngClass="resume__bar"></div>
+        <div ngClass="resume__bar" [class.light]="isSwitchMode"></div>
         <div ngClass="resume__item">
             <h3>
-                <span><time datetime="2012">2012</time></span> ⟶ <span><time datetime="2016">2016</time></span> : <span>Université</span> d'histoire, histoire de l'art et archéologie
+                <span [class.light]="isSwitchMode"><time datetime="2012">2012</time></span> ⟶ <span [class.light]="isSwitchMode"><time datetime="2016">2016</time></span> : <span [class.light]="isSwitchMode">Université</span> d'histoire, histoire de l'art et archéologie
             </h3>
             <p>
-                Des <span>études spécifiques</span> mais qui m'ont appris à aller de l'avant en développant mon caractère et des capacités pour :
+                Des <span [class.light]="isSwitchMode">études spécifiques</span> mais qui m'ont appris à aller de l'avant en développant mon caractère et des capacités pour :
             </p>
             <ul>
-                <li><span>Analyser</span> des documents et en retirer des informations</li>
-                <li><span>Synthétiser</span> des sources diverses et les recouper</li>
-                <li><span>Focaliser</span> mon attention pendant plusieurs heures</li>
-                <li><span>Travailler en groupe</span> et monter des projets</li>
+                <li><span [class.light]="isSwitchMode">Analyser</span> des documents et en retirer des informations</li>
+                <li><span [class.light]="isSwitchMode">Synthétiser</span> des sources diverses et les recouper</li>
+                <li><span [class.light]="isSwitchMode">Focaliser</span> mon attention pendant plusieurs heures</li>
+                <li><span [class.light]="isSwitchMode">Travailler en groupe</span> et monter des projets</li>
             </ul>
         </div>
     </div>

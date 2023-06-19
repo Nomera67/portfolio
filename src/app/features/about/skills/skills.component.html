@@ -1,27 +1,27 @@
 <div ngClass="skills">
-    <h2 ngClass="skills__title" id="skillsTitle"><span>Aptitudes et capacités</span></h2>
+    <h2 ngClass="skills__title" id="skillsTitle"><span [class.light]="isSwitchMode">Aptitudes et capacités</span></h2>
     <div ngClass="skills__container">
         <div ngClass="skills__item">
             <h3>
-                Compétences <span>techniques</span>
+                Compétences <span [class.light]="isSwitchMode">techniques</span>
             </h3>
             <ul>
                 <li>HTML5</li>
                 <li>CSS3</li>
-                <li><span>SCSS</span></li>
+                <li><span [class.light]="isSwitchMode">SCSS</span></li>
                 <li>JavaScript</li>
-                <li><span>Angular</span></li>
+                <li><span [class.light]="isSwitchMode">Angular</span></li>
                 <li>TypeScript</li>
-                <li><span>GitHub</span></li>
-                <li><span>WordPress</span></li>
+                <li><span [class.light]="isSwitchMode">GitHub</span></li>
+                <li><span [class.light]="isSwitchMode">WordPress</span></li>
                 <li>Tailwind</li>
                 <li>Figma</li>
             </ul>
         </div>
-        <div ngClass="skills__bar"></div>
+        <div ngClass="skills__bar" [class.light]="isSwitchMode"></div>
         <div ngClass="skills__item">
             <h3>
-                Compétences techniques <span>à acquérir</span>
+                Compétences techniques <span [class.light]="isSwitchMode">à acquérir</span>
             </h3>
             <ul>
                 <li>GSAP</li>
@@ -29,10 +29,10 @@
                 <li>Construction d'API</li>
             </ul>
         </div>
-        <div ngClass="skills__bar"></div>
+        <div ngClass="skills__bar" [class.light]="isSwitchMode"></div>
         <div ngClass="skills__item">
             <h3>
-                Compétences <span>comportementales</span>
+                Compétences <span [class.light]="isSwitchMode">comportementales</span>
             </h3>
             <ul>
                 <li>Esprit d'équipe</li>
@@ -42,9 +42,9 @@
                 <li>Ecoute et curiosité</li>
             </ul>
         </div>
-        <div ngClass="skills__bar"></div>
+        <div ngClass="skills__bar" [class.light]="isSwitchMode"></div>
         <div ngClass="skills__item">
-            <h3><span>Langues</span></h3>
+            <h3><span [class.light]="isSwitchMode">Langues</span></h3>
             <ul>
                 <li>Français : langue maternelle</li>
                 <li>Anglais : courant</li>

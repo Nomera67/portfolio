@@ -1,11 +1,11 @@
-<div ngClass="heroe">
+<div ngClass="heroe" [class.light]="isSwitchMode">
     <div ngClass="heroe__presentation">
         <p>Bienvenue</p>
-        <h1>Je suis <span ngClass="spanColor">Yan</span></h1>
-        <h2>Développeur <span ngClass="spanColor">Front-End</span></h2>
+        <h1>Je suis <span ngClass="spanColor" [class.light]="isSwitchMode">Yan</span></h1>
+        <h2>Développeur <span ngClass="spanColor" [class.light]="isSwitchMode">Front-End</span></h2>
     </div>
     <div ngClass="heroe__contact">
-        <div ngClass="heroe__contact__container">
+        <div ngClass="heroe__contact__container" [class.light]="isSwitchMode">
             <address>y.rechtenstein@gmail.com</address>
             <button ngxClipboard [cbContent]="'y.rechtenstein@gmail.com'">Cliquez pour copier</button>
         </div>
